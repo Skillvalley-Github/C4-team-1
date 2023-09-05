@@ -1,11 +1,26 @@
 import React from "react";
 import "./App.css";
+import { Route, Routes } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import Layout from "./components/Shared/Layout";
+import Dashboard from "./components/Dashboard";
+import Payroll from "./partials/Payroll";
+import Attendance from "./partials/Attendance";
+import Tasks from "./partials/Tasks";
+import EmployeeData from "./partials/EmployeeData";
+
 const App = () => {
   return (
     <>
-      <h1 className="flex items-center justify-center h-screen text-2xl text-green-700 animate-pulse">
-        Welcome to FusionSync
-      </h1>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="employeedata" element={<EmployeeData />} />
+          <Route path="attendance" element={<Attendance />} />
+          <Route path="payroll" element={<Payroll />} />
+          <Route path="tasks" element={<Tasks />} />
+        </Route>
+      </Routes>
     </>
   );
 };
