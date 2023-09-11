@@ -1,17 +1,18 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Shared/Layout";
 
-const Attendance = () => {
+const Payroll = () => {
   return (
     <>
       <Layout>
         <div>
-          <p>Attendance</p>
-          <Link to="/">Dashboard</Link>
+          <p>payroll</p>
+          <Link to="/">dashboard</Link>
         </div>
       </Layout>
     </>
   );
 };
 
-export default Attendance;
+export default Payroll;
