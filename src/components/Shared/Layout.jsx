@@ -2,7 +2,8 @@ import React from "react";
 import { Outlet } from "react-router";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import Dashboard from "../../app/Dashboard";
+import Dashboard from "../../app/Dashboard/Dashboard";
+import EmployeeMgmt from "../../app/Employees/EmployeeMgmt";
 
 const Layout = () => {
   return (
@@ -15,7 +16,7 @@ const Layout = () => {
         
         <Sidebar/>
       </div>
-      <Dashboard/>
+      <EmployeeMgmt/>
       <div>{<Outlet />}</div>
     </>
   );
