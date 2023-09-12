@@ -13,7 +13,7 @@ import UserIcon from '@heroicons/react/24/outline/UserIcon'
 import Cog6ToothIcon from '@heroicons/react/24/outline/Cog6ToothIcon'
 import BoltIcon from '@heroicons/react/24/outline/BoltIcon'
 import ChartBarIcon from '@heroicons/react/24/outline/ChartBarIcon'
-import CurrencyDollarIcon from '@heroicons/react/24/outline/CurrencyDollarIcon'
+import CurrencyRupeeIcon from '@heroicons/react/24/outline/CurrencyRupeeIcon'
 import InboxArrowDownIcon from '@heroicons/react/24/outline/InboxArrowDownIcon'
 import UsersIcon from '@heroicons/react/24/outline/UsersIcon'
 import KeyIcon from '@heroicons/react/24/outline/KeyIcon'
@@ -31,30 +31,29 @@ const routes = [
   },
   {
     path: '/app/leads', // url
-    icon: <InboxArrowDownIcon className={iconClasses}/>, // icon component
-    name: 'Leads', // name that appear in Sidebar
+    icon: <UsersIcon className={iconClasses}/>, // icon component
+    name: 'Employee Management', // name that appear in Sidebar
   },
   {
     path: '/app/transactions', // url
-    icon: <CurrencyDollarIcon className={iconClasses}/>, // icon component
-    name: 'Transactions', // name that appear in Sidebar
-  },
-  {
-    path: '/app/charts', // url
-    icon: <ChartBarIcon className={iconClasses}/>, // icon component
-    name: 'Analytics', // name that appear in Sidebar
-  },
-  {
-    path: '/app/integration', // url
-    icon: <BoltIcon className={iconClasses}/>, // icon component
-    name: 'Integration', // name that appear in Sidebar
+    icon: <CurrencyRupeeIcon  className={iconClasses}/>, // icon component
+    name: 'Payroll', // name that appear in Sidebar
   },
   {
     path: '/app/calendar', // url
     icon: <CalendarDaysIcon className={iconClasses}/>, // icon component
-    name: 'Calendar', // name that appear in Sidebar
+    name: 'Attendance', // name that appear in Sidebar
   },
-
+  {
+    path: '/app/charts', // url
+    icon: <ChartBarIcon className={iconClasses}/>, // icon component
+    name: 'Leave Tracker', // name that appear in Sidebar
+  },
+  {
+    path: '/app/integration', // url
+    icon: <InboxArrowDownIcon className={iconClasses}/>, // icon component
+    name: 'Tasks', // name that appear in Sidebar
+  },
   {
     path: '', //no url needed as this has submenu
     icon: <DocumentDuplicateIcon className={`${iconClasses} inline` }/>, // icon component
