@@ -10,7 +10,7 @@ import profilePhoto from '../../assets/images/profile-photo.png'
 
 import { NavLink,  Routes, Link , useLocation} from 'react-router-dom'
 
-const Navbar = (props) => {
+const Navbar2 = () => {
 
     // const {noOfNotifications, pageTitle} = useSelector(state => state.header)
     const [currentTheme, setCurrentTheme] = useState(localStorage.getItem("theme"))
@@ -48,7 +48,7 @@ const Navbar = (props) => {
                 <div className="">
                     <label htmlFor="left-sidebar-drawer" className="btn btn-primary drawer-button lg:hidden">
                     <Bars3Icon className="h-5 inline-block w-5"/></label>
-                    <h1 className="text-2xl font-semibold ml-2">{props.pageTitle}</h1>
+                    {/* <h1 className="text-2xl font-semibold ml-2">{pageTitle}</h1> */}
                 </div>
 
                 
@@ -81,11 +81,11 @@ const Navbar = (props) => {
                 >
                     <div className="indicator">
                         <BellIcon className="h-6 w-6"/>
-                         {/* {noOfNotifications > 0 ? */}
+                        {/* {noOfNotifications > 0 ?  */}
                         <span className="indicator-item badge badge-secondary badge-sm">
                             {/* {noOfNotifications} */}
-                            </span> 
-                            {/* :null */}
+                            </span> :
+                            {/* //  null } */}
                     </div>
                 </button>
 
@@ -116,4 +116,4 @@ const Navbar = (props) => {
   )
 }
 
-export default Navbar
+export default Navbar2

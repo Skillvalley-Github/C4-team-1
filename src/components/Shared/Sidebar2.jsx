@@ -1,26 +1,19 @@
-import React, {useState} from "react";
+import React from "react";
 import routes from "../../routes/sidebar";
 import { NavLink, Routes, Link, useLocation } from "react-router-dom";
 import SidebarSubmenu from "./SidebarSubmenu";
 import XMarkIcon from "@heroicons/react/24/outline/XMarkIcon";
-import logo1 from "../../assets/images/logo-black.svg";
-import logo2 from "../../assets/images/logo-full-white.svg";
+import logo from "../../assets/images/logo-black.svg";
 
-const Sidebar = () => {
+const Sidebar2 = () => {
   const location = useLocation();
-
   const close = (e) => {
     document.getElementById("left-sidebar-drawer").click();
   };
-
-  // const currentTheme = localStorage.getItem("theme")
-  // const [currentLogo, setCurrentLogo] = useState(logo1);
-  // if(currentTheme == 'dark') setCurrentLogo(logo2)
-
   return (
-    <div className="drawer-side z-40">
+    <div className="drawer-side ">
       <label htmlFor="left-sidebar-drawer" className="drawer-overlay"></label>
-      <ul className="menu  w-80 h-screen bg-base-100 pt-2 text-base-content">
+      <ul className="menu  w-80 bg-base-100 pt-2 text-base-content">
         <button
           className="btn btn-circle btn-ghost  absolute right-0 top-0 z-50 mr-2 mt-4 bg-base-300 lg:hidden"
           onClick={() => close()}>
@@ -29,8 +22,8 @@ const Sidebar = () => {
 
         <li className="mb-2 text-xl font-semibold">
           <Link to={"/app/welcome"}>
-            <img className="w-40" src={logo1} alt="FusionSync Logo" />
-            
+            <img className="mask mask-squircle w-10" src={logo} alt="DashWind Logo" />
+            DashWind
           </Link>{" "}
         </li>
         {routes.map((route, k) => {
@@ -59,4 +52,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Sidebar2;
