@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "../../components/Shared/Layout";
 
-const Task = () => {
+const LeaveTracker = () => {
   return (
     <>
-    
-        <div>task</div>
    
+        <div>Leavetracker</div>
+    
     </>
   );
 };
 
-export default Task;
+export default LeaveTracker;

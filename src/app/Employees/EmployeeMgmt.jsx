@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { empData } from "../../user/dummy";
 import Table from "./Table";
+import Layout from "../../components/Shared/Layout";
 
 const EmployeeMgmt = () => {
   const columns = useMemo(
@@ -45,9 +46,11 @@ const EmployeeMgmt = () => {
 
   return (
     <>
-      <div className="z-60">
-        <Table columns={columns} data={data} />
-      </div>
+   
+        <div className="z-60">
+          <Table columns={columns} data={data} />
+        </div>
+    
     </>
   );
 };

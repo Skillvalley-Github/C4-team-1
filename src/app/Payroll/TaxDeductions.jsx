@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "../../components/Shared/Layout";
 
-const Task = () => {
+const TaxDeductions = () => {
   return (
     <>
-    
-        <div>task</div>
-   
+     
+        <div>TaxDeductions</div>
+      
     </>
   );
 };
 
-export default Task;
+export default TaxDeductions;

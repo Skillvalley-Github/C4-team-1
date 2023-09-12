@@ -9,15 +9,18 @@ const Layout = () => {
   return (
     <>
       <div className="drawer-mobile drawer lg:drawer-open bg-slate-300">
-        <input id="left-sidebar-drawer" type="checkbox" className="drawer-toggle" />
+        <input
+          id="left-sidebar-drawer"
+          type="checkbox"
+          className="drawer-toggle"
+        />
         <div className="drawer-content flex flex-col ">
-          <Navbar pageTitle={'Dashboard'}/>
+          <Navbar pageTitle={"Dashboard"} />
+
+          <Outlet />
         </div>
-        
-        <Sidebar/>
+        <Sidebar />
       </div>
-      <EmployeeMgmt/>
-      <div>{<Outlet />}</div>
     </>
   );
 };

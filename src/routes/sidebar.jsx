@@ -17,13 +17,16 @@ import InboxArrowDownIcon from "@heroicons/react/24/outline/InboxArrowDownIcon";
 import UsersIcon from "@heroicons/react/24/outline/UsersIcon";
 import KeyIcon from "@heroicons/react/24/outline/KeyIcon";
 import DocumentDuplicateIcon from "@heroicons/react/24/outline/DocumentDuplicateIcon";
+import ReceiptPercentIcon from "@heroicons/react/24/outline/ReceiptPercentIcon";
+import ReceiptRefundIcon from "@heroicons/react/24/outline/ReceiptRefundIcon";
+import AdjustmentsVerticalIcon from "@heroicons/react/24/outline/AdjustmentsVerticalIcon";
 
 const iconClasses = `h-6 w-6`;
 const submenuIconClasses = `h-5 w-5`;
 
 const routes = [
   {
-    path: "/dashboard",
+    path: "/",
     icon: <Squares2X2Icon className={iconClasses} />,
     name: "Dashboard",
   },
@@ -33,9 +36,26 @@ const routes = [
     name: "Employee Management", // name that appear in Sidebar
   },
   {
-    path: "/payroll", // url
-    icon: <CurrencyRupeeIcon className={iconClasses} />, // icon component
+    path: "", // url
+    icon: <CurrencyRupeeIcon className={`${iconClasses} inline`} />, // icon component
     name: "Payroll", // name that appear in Sidebar
+    submenu: [
+      {
+        path: "/payroll/taxdeductions",
+        icon: <ReceiptPercentIcon className={`${submenuIconClasses} `} />,
+        name: "Tax Deductions",
+      },
+      {
+        path: "/payroll/reimbursements",
+        icon: <ReceiptRefundIcon className={`${submenuIconClasses} `} />,
+        name: "Reimbursements",
+      },
+      {
+        path: "/payroll/settings",
+        icon: <AdjustmentsVerticalIcon className={`${submenuIconClasses} `} />,
+        name: "Payroll Settings",
+      },
+    ],
   },
   {
     path: "/attendance", // url
