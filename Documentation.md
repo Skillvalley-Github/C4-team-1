@@ -14,3 +14,7 @@
 
 ## 2. Then add import heroicons to your components
     import BellIcon from '@heroicons/react/24/outline/BellIcon'
+
+## Other Dependencies
+    npm i react-table
+    npm i theme-change
