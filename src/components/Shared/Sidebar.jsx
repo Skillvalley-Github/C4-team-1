@@ -4,7 +4,7 @@ import { NavLink, Routes, Link, useLocation } from "react-router-dom";
 import SidebarSubmenu from "./SidebarSubmenu";
 import XMarkIcon from "@heroicons/react/24/outline/XMarkIcon";
 import logo1 from "../../assets/images/logo-black.svg";
-import logo2 from "../../assets/images/logo-full-white.svg";
+// import logo2 from "../../assets/images/logo-full-white.svg";
 
 const Sidebar = () => {
   const location = useLocation();
