@@ -4,7 +4,7 @@ import Dashboard from "./app/Dashboard/Dashboard";
 import Attendance from "./app/Attendance/Attendance";
 import Payroll from "./app/Payroll/Payroll";
 import Tasks from "./app/Tasks/Task";
-import EmployeeData from "./app/Employees/EmployeeMgmt";
+import EmployeeData from "./app/Employees/EmployeeTable";
 import LeaveTracker from "./app/Leave/LeaveTracker";
 import TaxDeductions from "./app/Payroll/TaxDeductions";
 import Reimbursements from "./app/Payroll/Reimbursements";
