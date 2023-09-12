@@ -1,13 +1,9 @@
-import React from "react";
+import React from 'react'
 
+const DashboardMain = () => {
+  return (
+    <div>DashboardMain</div>
+  )
+}
 
-
-
-const Main = () => {
-    return <div>
-    
-    
-    </div>;
-};
-
-export default Main;
+export default DashboardMain
