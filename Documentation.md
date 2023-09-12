@@ -18,3 +18,4 @@
 ## Other Dependencies
     npm i react-table
     npm i theme-change
+    npm i moment
