@@ -4,7 +4,7 @@ import Dropdown from "../../../components/Shared/Dropdown";
 const EmpDetailsInput = (props) => {
   return (
     <>
-      <div className="card m-5 mx-auto w-4/6 bg-base-100 p-6 shadow-xl">
+      <div className="card mx-auto mb-6 w-11/12 bg-base-100 p-10 shadow-xl">
         <h1 className="mb-5 text-center text-3xl font-bold text-red-500">Personal Details</h1>
         <form>
           <div class="group relative z-0 mb-6 w-full">
@@ -23,6 +23,7 @@ const EmpDetailsInput = (props) => {
               {/* Email address */}
             </label>
           </div>
+          
           <div class="group relative z-0 mb-6 w-full">
             <input
               type="email"
@@ -39,7 +40,7 @@ const EmpDetailsInput = (props) => {
               {/* Email address */}
             </label>
           </div>
-          
+
           <div class="grid md:grid-cols-2 md:gap-6">
             <div class="group relative z-0 mb-6 w-full">
               <input
@@ -56,6 +57,7 @@ const EmpDetailsInput = (props) => {
                 First name
               </label>
             </div>
+
             <div class="group relative z-0 mb-6 w-full">
               <input
                 type="text"
@@ -72,6 +74,7 @@ const EmpDetailsInput = (props) => {
               </label>
             </div>
           </div>
+
           <div class="mt-3 grid md:grid-cols-2 md:gap-6">
             <div class="group relative z-0 mb-6 w-full">
               <input
@@ -89,55 +92,58 @@ const EmpDetailsInput = (props) => {
                 Phone number (123-456-7890)
               </label>
             </div>
-            <Dropdown/>
+
+            <Dropdown />
           </div>
-            <div class="group relative z-0 mb-12 w-full">
+
+          <div class="group relative z-0 mb-12 w-full">
+            <input
+              type="text"
+              name="floating_company"
+              id="floating_company"
+              class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+              placeholder=" "
+              required
+            />
+            <label
+              for="floating_company"
+              class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500">
+              Father's Name
+            </label>
+          </div>
+
+          <div class="grid md:grid-cols-2 md:gap-6">
+            <div class="group relative z-0 mb-6 flex w-full">
               <input
-                type="text"
-                name="floating_company"
-                id="floating_company"
-                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+                type="date"
+                name="floating_password"
+                id="floating_password"
+                class="text-black-900 peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-black dark:focus:border-blue-500"
                 placeholder=" "
                 required
               />
               <label
-                for="floating_company"
+                for="floating_password"
                 class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500">
-                Father's Name
+                Date of Birth
               </label>
             </div>
 
-          <div class="grid md:grid-cols-2 md:gap-6">
-          <div class="group relative z-0 mb-6 w-full flex">
-          <input
-              type="date"
-              name="floating_password"
-              id="floating_password"
-              class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-black-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-black dark:focus:border-blue-500"
-              placeholder=" "
-              required
-            />
-            <label
-              for="floating_password"
-              class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500">
-              Date of Birth
-            </label>
-          </div>
-          <div class="group relative z-0 mb-6 w-full">
-            <input
-              type="date"
-              name="floating_password"
-              id="floating_password"
-              class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-black-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-black dark:focus:border-blue-500"
-              placeholder=" "
-              required
-            />
-            <label
-              for="floating_password"
-              class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500">
-              Date of Joining
-            </label>
-          </div>
+            <div class="group relative z-0 mb-6 w-full">
+              <input
+                type="date"
+                name="floating_password"
+                id="floating_password"
+                class="text-black-900 peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-black dark:focus:border-blue-500"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_password"
+                class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500">
+                Date of Joining
+              </label>
+            </div>
           </div>
 
           <div class="group relative z-0 mb-6 w-full">
@@ -187,6 +193,7 @@ const EmpDetailsInput = (props) => {
               Password
             </label>
           </div>
+
           <div class="group relative z-0 mb-6 w-full">
             <input
               type="password"
@@ -202,11 +209,14 @@ const EmpDetailsInput = (props) => {
               Confirm password
             </label>
           </div>
-          <button
-            type="submit"
-            class="w-full rounded-lg bg-red-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 sm:w-auto">
-            Submit
-          </button>
+
+          <div className="flex flex-col items-center justify-center ">
+            <button
+              type="submit"
+              class="rounded-lg bg-red-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 sm:w-auto">
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </>
