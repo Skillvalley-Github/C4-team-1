@@ -5,7 +5,7 @@ const Attendance = () => {
   return (
     <>
     
-        <div>payroll</div>
+        <div>Attendance</div>
     
     </>
   )

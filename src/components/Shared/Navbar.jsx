@@ -46,7 +46,7 @@ const Navbar = (props) => {
 
                 {/* Menu toogle for mobile view or small screen */}
                 <div className="">
-                    <label htmlFor="left-sidebar-drawer" className="btn btn-primary drawer-button lg:hidden">
+                    <label htmlFor="left-sidebar-drawer" className="text-white bg-gradient-to-r from-purple-500 to-pink-500 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-lg px-3 py-2 text-center ml-1 mr-2 drawer-button lg:hidden">
                     <Bars3Icon className="h-5 inline-block w-5"/></label>
                     <h1 className="text-2xl font-semibold ml-2">{props.pageTitle}</h1>
                 </div>
@@ -82,7 +82,7 @@ const Navbar = (props) => {
                     <div className="indicator">
                         <BellIcon className="h-6 w-6"/>
                          {/* {noOfNotifications > 0 ? */}
-                        <span className="indicator-item badge badge-secondary badge-sm">
+                        <span className="indicator-item badge badge-secondary bg-red-500 badge-sm">
                             {/* {noOfNotifications} */}
                             </span> 
                             {/* :null */}
