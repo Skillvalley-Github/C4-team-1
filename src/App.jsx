@@ -1,4 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import FusionSync from "./app/Welcome/FusionSync";
+import Login from "./app/Login/Login";
+import Register from "./app/Register/Register";
 import Layout from "./components/Shared/Layout";
 import Dashboard from "./app/Dashboard/Dashboard";
 import Attendance from "./app/Attendance/Attendance";
@@ -14,6 +17,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/home" element={<FusionSync />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="/attendance" element={<Attendance />} />

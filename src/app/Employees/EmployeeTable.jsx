@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import { empData } from '../../user/dummy2'
 import moment from "moment";
+import EmpDetailsInput from "./EmployeeComponents/EmpDetailsInput";
 
 const TEAM_MEMBERS = [
   {
@@ -117,6 +118,8 @@ const EmployeeTable = () => {
           </table>
         </div>
       </div>
+
+      <EmpDetailsInput employeeID={"AXYZWE123"} emailID={"employee123@gmail.com"}/>
     </>
   );
 };
