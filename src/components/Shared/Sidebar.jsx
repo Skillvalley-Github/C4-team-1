@@ -1,10 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import routes from "../../routes/sidebar";
-import { NavLink, Routes, Link, useLocation } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import SidebarSubmenu from "./SidebarSubmenu";
 import XMarkIcon from "@heroicons/react/24/outline/XMarkIcon";
-import logo1 from "../../assets/images/logo-black.svg";
-// import logo2 from "../../assets/images/logo-full-white.svg";
+import logo from "../../assets/images/logo-red.svg";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -12,10 +11,6 @@ const Sidebar = () => {
   const close = (e) => {
     document.getElementById("left-sidebar-drawer").click();
   };
-
-  // const currentTheme = localStorage.getItem("theme")
-  // const [currentLogo, setCurrentLogo] = useState(logo1);
-  // if(currentTheme == 'dark') setCurrentLogo(logo2)
 
   return ( <>
    
@@ -31,7 +26,7 @@ const Sidebar = () => {
 
         <li className="mb-2 text-xl font-semibold">
           <Link to={"/app/welcome"}>
-            <img className="w-40" src={logo1} alt="FusionSync Logo" />
+            <img className="w-40" src={logo} alt="FusionSync Logo" />
             
           </Link>{" "}
         </li>

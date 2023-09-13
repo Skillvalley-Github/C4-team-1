@@ -84,7 +84,7 @@ const EmployeeTable = () => {
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Email Id</th>
+                <th>Email ID</th>
                 <th>Joined On</th>
                 <th>Role</th>
                 <th>Last Active</th>
