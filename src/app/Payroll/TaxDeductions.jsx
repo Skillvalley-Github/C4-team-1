@@ -5,7 +5,7 @@ import currentHomeRentData from "../../user/currentHomeRentData.json";
 import Regim from "../../user/Regime.json";
 import Section80deductions from "../../user/section80deductions.json";
 import HomeLoan from "../../user/homeLoan.json";
-import LeaveTravelAllowance from "../../user/LeaveTravelAllowance.json";
+import LeaveTravelAllowance from "../../user/leaveTravelAllowance.json";
 
 const TaxDeductions = () => {
   return (
