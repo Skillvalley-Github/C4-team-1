@@ -1,0 +1,18 @@
+{
+  "title": "Section 80 deductions (investments, education loans, medical insurance etc.)",
+  "columns": ["Category", "Amount"],
+  "rows": [
+    [],
+    ["Section 80C", "₹0"],
+    ["Section 80CCD (1B)", "₹0"],
+    ["Section 80D", "₹0"],
+    ["Section 80DD", "₹0"],
+    ["Section 80E", "₹0"],
+    ["Section 80EEB", "₹0"],
+    ["Section 80G", "₹0"],
+    ["Section 80U", "₹0"],
+    ["Section 80DDB", "₹0"],
+    ["Section 80TTA", "₹0"],
+    ["Section 80TTB", "₹0"]
+  ]
+}
