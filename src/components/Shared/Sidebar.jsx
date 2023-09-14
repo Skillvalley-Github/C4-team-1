@@ -25,7 +25,7 @@ const Sidebar = () => {
         </button>
 
         <li className="mb-2 text-xl font-semibold ">
-          <Link to={"/home"}>
+          <Link to={"/"}>
             <img className="w-40" src={logo} alt="FusionSync Logo" />       
           </Link>{" "}
         </li>

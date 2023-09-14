@@ -1,0 +1,12 @@
+{
+  "title": "Select Your Preferred Regime",
+  "columns": [" ", "New tax regime", "Old tax regime"],
+  "rows": [
+    ["Earnings", "0", "0"],
+    ["Exemptions", "0", "0"],
+    ["Standard Deduction", "50,000", "50,000"],
+    ["Deductions", "0", "0"],
+    ["Taxable Income", "0", "0"],
+    ["Total Tax Liability", "0", "0"]
+  ]
+}
