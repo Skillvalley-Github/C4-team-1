@@ -5,6 +5,7 @@ const PayrollTable = ({ title, columns, rows }) => {
     <div>
       <div className="flex w-11/12 justify-start p-4">
         <p className="text text-4xl font-bold text-gray-600">{title}</p>
+        {/* <button className="btn"></button> */}
       </div>
       <div className="flex justify-center p-6">
         <div className="card card-side w-full bg-base-100 shadow-xl ">
