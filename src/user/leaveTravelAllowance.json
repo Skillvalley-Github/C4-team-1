@@ -1,0 +1,9 @@
+{
+  "title": "Leave Travel Allowance",
+  "columns": ["Category", "Info"],
+  "rows": [
+    ["Amount", "₹0"],
+    ["Origin", "-NA-"],
+    ["Destination", "-NA-"]
+  ]
+}

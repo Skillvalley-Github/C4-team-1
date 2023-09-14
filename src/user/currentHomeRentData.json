@@ -1,6 +1,6 @@
 {
   "title": "Current home rent (as on 01/09/2023)",
-  "columns": [],
+  "columns": ["Category", "Info"],
   "rows": [
     ["Current Monthly Rent", "0"],
     ["Name of landlord", "-NA-"],

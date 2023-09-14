@@ -1,0 +1,12 @@
+{
+  "title": "Interest on home loan",
+  "columns": ["Category", "Info"],
+  "rows": [
+    [" Annual interest payable / paid", "₹0"],
+    ["Additional benefit under Section 80EE", "₹0"],
+    ["Name of lender", "-NA-"],
+    ["PAN of lender", "-NA-"],
+    ["Address of lender", "-NA-"],
+    ["Section 80EEA", "₹0"]
+  ]
+}
