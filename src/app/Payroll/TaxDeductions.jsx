@@ -10,8 +10,7 @@ import LeaveTravelAllowance from "../../user/leaveTravelAllowance.json";
 const TaxDeductions = () => {
   return (
     <>
-      <div className="flex flex-col justify-center px-24 py-6">
-        <div className="flex w-full px-4  pl-5">
+      <div className="flex flex-col justify-center px-24 max-sm:px-8 py-6 max-sm:w-screen overflow-x-hidden">
           <div className=" w-full rounded-md  border-l-8 border-red-600 bg-red-300 p-6  shadow-xl">
             <div className="">
               <p>
@@ -23,7 +22,7 @@ const TaxDeductions = () => {
               </p>
             </div>
           </div>
-        </div>
+
         <div className="flex justify-center px-4 py-8">
           <div className=" card bg-base-100 shadow-xl">
             <div className="card-body ">
@@ -38,7 +37,9 @@ const TaxDeductions = () => {
           </div>
         </div>
 
+        <div className="">
         <PayrollTable title={Regim.title} columns={Regim.columns} rows={Regim.rows} />
+        </div>
 
         <div className="flex justify-start p-4">
           <p>
@@ -56,7 +57,7 @@ const TaxDeductions = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-x-4 p-4">
+        <div className="flex gap-x-4 p-4  max-sm:p-0  max-sm:pt-6">
           <button className=" btn btn-info btn-active border-none hover:bg-blue-500 text-white ">
             SWITCH REGIME
           </button>

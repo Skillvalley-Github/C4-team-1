@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Layout from "../../components/Shared/Layout";
+import RightSidebar from "../../components/Shared/RightSidebar";
+import Modal from "../../components/Shared/Modal";
 
 const Dashboard = () => {
   return (
     <>
-      <div className="">
-        <p>Dashboard</p>
-       
+      <div className="absolute right-0">
+       <RightSidebar/>
       </div>
+        <p>Dashboard</p>
+        <Modal/>
     </>
   );
 };
