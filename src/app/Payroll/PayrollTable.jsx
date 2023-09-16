@@ -2,14 +2,15 @@ import React from "react";
 
 const PayrollTable = ({ title, columns, rows }) => {
   return (
-    <div>
-      <div className="flex w-11/12 justify-start p-4">
-        <p className="text text-4xl font-bold text-gray-600">{title}</p>
+    <>
+      <div className="w-11/12 justify-start p-4  max-sm:pt-10 max-sm:w-screen">
+        <h1 className="text text-4xl font-bold text-gray-600 max-sm:text-base max-sm:font-extrabold">
+          {title}
+        </h1>
         {/* <button className="btn"></button> */}
       </div>
-      <div className="flex justify-center p-6">
-        <div className="card card-side w-full bg-base-100 shadow-xl ">
-          <div className="card-body">
+      <div className="p-6 max-sm:p-0 max-sm:pt-3 max-sm:w-fit">
+        <div className="card card-body max-sm:w-screen bg-base-100 shadow-xl ">
             <div className="overflow-x-auto">
               <table className="table">
                 {/* head */}
@@ -33,8 +34,7 @@ const PayrollTable = ({ title, columns, rows }) => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+    </>
   );
 };
 

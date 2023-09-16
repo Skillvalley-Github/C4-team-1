@@ -222,7 +222,7 @@ const EmpDetailsInput = (props) => {
             </label>
           </div>
 
-          <CustomButton buttonText={"Submit"}/>
+          <CustomButton buttonText={"Submit"} type={"submit"} to={"#_"}/>
         </form>
       </div>
     </>

@@ -9,7 +9,6 @@ const Layout = () => {
       <div className="drawer-mobile drawer h-fit overscroll-none bg-slate-300 lg:drawer-open">
         <input id="left-sidebar-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex min-w-full flex-col">
-          
           <Navbar pageTitle={"Dashboard"} />
           <div className="">
             <Outlet />
