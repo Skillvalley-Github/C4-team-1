@@ -12,6 +12,12 @@ import LeaveTracker from "./app/Leave/LeaveTracker";
 import TaxDeductions from "./app/Payroll/TaxDeductions";
 import Reimbursements from "./app/Payroll/Reimbursements";
 import PayrollSettings from "./app/Payroll/PayrollSettings";
+import RegimeSelection from "./app/Payroll/PayrollSubpages/RegimeSelection";
+import HomeRentSelection from "./app/Payroll/PayrollSubpages/HomeRentSelection";
+import Section80Deductions from "./app/Payroll/PayrollSubpages/Section80Deductions";
+import HomeLoan from "./app/Payroll/PayrollSubpages/HomeLoan";
+import LeaveTravelAllowance from "./app/Payroll/PayrollSubpages/LeaveTravelAllowance";
+import PanDetails from "./app/Payroll/PayrollSubpages/PanDetails";
 import EditProfile from "./app/Profile/EditProfile";
 import InternalPage from "./app/Protected/404";
 
@@ -28,6 +34,14 @@ const App = () => {
           <Route path="/attendance" element={<Attendance />} />
           <Route path="/payroll/*" element={<Payroll />} />
           <Route path="/payroll/taxdeductions" element={<TaxDeductions />} />
+          {/* ---------------Payroll different tax deductions routes--------------------------------- */}
+          <Route path="/payroll/taxdeductions/regime-selection" element={<RegimeSelection />} />
+          <Route path="/payroll/taxdeductions/home-rent" element={<HomeRentSelection />} />
+          <Route path="/payroll/taxdeductions/section-80-deductions" element={<Section80Deductions />} />
+          <Route path="/payroll/taxdeductions/home-loan" element={<HomeLoan />} />
+          <Route path="/payroll/taxdeductions/leave-travel-allowance" element={<LeaveTravelAllowance />} />
+          <Route path="/payroll/taxdeductions/pan-details" element={<PanDetails />} />
+          {/* --------------------tax deductions routes ends here---------------------------- */}
           <Route path="/payroll/reimbursements" element={<Reimbursements />} />
           <Route path="/payroll/reimbursements" element={<Reimbursements />} />
           <Route path="/payroll/settings" element={<PayrollSettings />} />
