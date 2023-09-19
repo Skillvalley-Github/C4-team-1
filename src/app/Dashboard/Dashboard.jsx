@@ -83,7 +83,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="m-5 grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div className="m-5 2xl:mx-10 grid grid-cols-1 gap-6 2xl:gap-12 md:grid-cols-3">
         {integrationList.map((i, k) => {
           return (
             <Link to={i.link} key={k}>
