@@ -1,11 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomButton from "../../../components/Shared/CustomButton";
+import logo from "../../../assets/images/logo-red.svg";
 
 const EmpDetailsInput = (props) => {
+  // const INITIAL_REGISTER_OBJ = {
+  //   name: "",
+  //   password: "",
+  //   emailId: "",
+  // };
+
+  // const [loading, setLoading] = useState(false);
+  // const [errorMessage, setErrorMessage] = useState("");
+  // const [registerObj, setRegisterObj] = useState(INITIAL_REGISTER_OBJ);
+
+  // const submitForm = (e) => {
+  //   e.preventDefault();
+  //   setErrorMessage("");
+
+  //   if (registerObj.name.trim() === "") return setErrorMessage("Name is required! (use any value)");
+  //   if (registerObj.emailId.trim() === "") return setErrorMessage("Email Id is required! (use any value)");
+  //   if (registerObj.password.trim() === "") return setErrorMessage("Password is required! (use any value)");
+  //   else {
+  //     setLoading(true);
+  //     // Call API to check user credentials and save token in localstorage
+  //     localStorage.setItem("token", "DumyTokenHere");
+  //     setLoading(false);
+  //     window.location.href = "/app/welcome";
+  //   }
+  // };
+
+  // const updateFormValue = ({ updateType, value }) => {
+  //   setErrorMessage("");
+  //   setRegisterObj({ ...registerObj, [updateType]: value });
+  // };
+
   return (
     <>
-      <div className="card mx-auto mb-8 w-11/12 bg-base-100 p-10 shadow-xl">
-        <h1 className="text-black-500 mb-8 text-center text-3xl font-bold">Personal Details</h1>
+      <div className="card mx-auto my-8 w-9/12 bg-bg-950 p-10 shadow-xl border-2 border-gray-950">
+        <div className="flex justify-center items-center"><img src={logo}/></div>
+        <p className="text-black-500 mb-8 text-center text-2xl">(Fill your details carefully)</p>
         <form>
           <div className="group relative z-0 mb-9 w-full">
             <input
@@ -90,7 +123,7 @@ const EmpDetailsInput = (props) => {
               />
               <label
                 htmlFor="phone"
-                className="absolute top-2 -z-10 origin-[0] -translate-y-8 scale-75 transform pl-3 text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500">
+                className="absolute top-2 -z-10 origin-[0] -translate-y-8 scale-75 transform pl-3 text-sm max-sm:text-xs text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500">
                 Phone number (123-456-7890)
               </label>
             </div>
@@ -98,12 +131,13 @@ const EmpDetailsInput = (props) => {
             <div className="group relative z-0 mb-10 w-full">
               <select
                 id="small"
+                defaultValue={"Gender"}
                 className="block w-full rounded border-2 border-gray-300  bg-transparent px-2 py-2 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-gray-400 dark:focus:border-blue-500">
-                <option selected>Gender</option>
-                <option defaultValue="US">Male</option>
-                <option defaultValue="CA">Female</option>
-                <option defaultValue="FR">Transgender</option>
-                <option defaultValue="DE">Other</option>
+                <option defaultValue="Gender">Gender</option>
+                <option defaultValue="Male">Male</option>
+                <option defaultValue="Female">Female</option>
+                <option defaultValue="Transgender">Transgender</option>
+                <option defaultValue="Other">Other</option>
               </select>
             </div>
           </div>
