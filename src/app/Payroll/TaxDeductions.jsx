@@ -10,7 +10,11 @@ import LeaveTravelAllowance from "../../user/leaveTravelAllowance.json";
 const TaxDeductions = () => {
   return (
     <>
-      <div className="flex flex-col justify-center overflow-x-hidden px-24 py-6 max-sm:w-screen max-sm:px-8">
+      <div className="flex justify-center fixed z-50 h-16 w-full bg-zinc-700 text-white">
+        Your Total Tax = $50213
+      </div>
+
+      <div className="flex flex-col justify-center overflow-x-hidden px-24 py-6 mt-16 max-sm:w-screen max-sm:px-8">
         <div className=" w-full rounded-md  border-l-8 border-red-600 bg-red-300 p-6  shadow-xl">
           <div className="">
             <p>
