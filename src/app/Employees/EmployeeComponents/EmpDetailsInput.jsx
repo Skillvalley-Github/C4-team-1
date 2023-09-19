@@ -36,8 +36,10 @@ const EmpDetailsInput = (props) => {
 
   return (
     <>
-      <div className="card mx-auto my-8 w-9/12 bg-bg-950 p-10 shadow-xl border-2 border-gray-950">
-        <div className="flex justify-center items-center"><img src={logo}/></div>
+      <div className="bg-bg-950 card mx-auto my-8 w-7/12 border-2 border-gray-950 p-10 shadow-xl max-sm:w-11/12">
+        <div className="flex items-center justify-center">
+          <img src={logo} />
+        </div>
         <p className="text-black-500 mb-8 text-center text-2xl">(Fill your details carefully)</p>
         <form>
           <div className="group relative z-0 mb-9 w-full">
@@ -111,7 +113,7 @@ const EmpDetailsInput = (props) => {
           </div>
 
           <div className="grid md:grid-cols-2 md:gap-6">
-            <div className="group relative z-0 mb-10 max-sm:mb-9 w-full">
+            <div className="group relative z-0 mb-10 w-full max-sm:mb-9">
               <input
                 type="tel"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
@@ -123,7 +125,7 @@ const EmpDetailsInput = (props) => {
               />
               <label
                 htmlFor="phone"
-                className="absolute top-2 -z-10 origin-[0] -translate-y-8 scale-75 transform pl-3 text-sm max-sm:text-xs text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500">
+                className="absolute top-2 -z-10 origin-[0] -translate-y-8 scale-75 transform pl-3 text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500 max-sm:text-xs">
                 Phone number (123-456-7890)
               </label>
             </div>
@@ -142,7 +144,7 @@ const EmpDetailsInput = (props) => {
             </div>
           </div>
 
-          <div className="group relative z-0 mb-11 max-sm:mb-14 w-full">
+          <div className="group relative z-0 mb-11 w-full max-sm:mb-14">
             <input
               type="text"
               name="father_name"
@@ -158,8 +160,8 @@ const EmpDetailsInput = (props) => {
             </label>
           </div>
 
-          <div className="grid md:grid-cols-2 md:gap-6 mb-1">
-            <div className="group relative z-0 mb-8 max-sm:mb-12 flex w-full">
+          <div className="mb-1 grid md:grid-cols-2 md:gap-6">
+            <div className="group relative z-0 mb-8 flex w-full max-sm:mb-12">
               <input
                 type="date"
                 name="dateOfBirth"
@@ -256,7 +258,7 @@ const EmpDetailsInput = (props) => {
             </label>
           </div>
 
-          <CustomButton buttonText={"Submit"} type={"submit"} to={"#_"}/>
+          <CustomButton buttonText={"Submit"} type={"submit"} to={"#_"} />
         </form>
       </div>
     </>
