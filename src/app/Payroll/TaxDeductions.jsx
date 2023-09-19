@@ -15,7 +15,7 @@ const TaxDeductions = () => {
           <div className="">
             <p>
               Please update your{" "}
-              <Link to="" className="font-semibold text-blue-700">
+              <Link to={"/payroll/taxdeductions/pan-details"} className="font-semibold text-blue-700">
                 PAN
               </Link>
               . Without the PAN, TDS will be deducted @20% (if applicable).

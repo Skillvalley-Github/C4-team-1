@@ -1,4 +1,5 @@
 import React from "react";
+import PlusIcon from "@heroicons/react/24/outline/PlusIcon";
 
 const HomeRentSelection = () => {
   return (
@@ -26,6 +27,12 @@ const HomeRentSelection = () => {
             non-metros.
           </div>
         </div>
+      </div>
+      <div className="flex px-8 py-6 drop-shadow-md">
+        <button className="btn ">
+          Add Another Rent House
+          <PlusIcon className="h-6 w-6" />
+        </button>
       </div>
     </>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-
 const LeaveTravelAllowance = () => {
   return (
     <>
@@ -20,8 +19,18 @@ const LeaveTravelAllowance = () => {
             next block (not applicable now since 2022 is over).
             <br /> - The day of journey should not be a holiday in your organization.
             <br />
-           
           </div>
+        </div>
+      </div>
+
+      <div>
+        <p className="flex px-8 py-6 font-bold">
+          Except from the exemptions you claim here in this page, how many LTA exemption have you claimed
+          already in 2022-2025?
+        </p>
+
+        <div className="flex px-8">
+          <input className="input input-bordered" placeholder="0" />
         </div>
       </div>
     </>
