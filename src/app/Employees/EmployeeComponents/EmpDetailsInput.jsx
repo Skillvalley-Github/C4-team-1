@@ -36,7 +36,7 @@ const EmpDetailsInput = (props) => {
 
   return (
     <>
-      <div className="bg-bg-950 card mx-auto my-8 w-7/12 border-2 border-gray-950 p-10 shadow-xl max-sm:w-11/12">
+      <div className="bg-bg-950 card mx-auto my-8 w-7/12 2xl:w-6/12 max-sm:w-11/12 border-2 border-gray-950 p-10 shadow-xl">
         <div className="flex items-center justify-center">
           <img src={logo} />
         </div>
