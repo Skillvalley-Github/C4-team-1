@@ -1,4 +1,7 @@
 import React from "react";
+
+import PayrollTable from "../PayrollTable";
+
 const LeaveTravelAllowance = () => {
   return (
     <>
@@ -31,6 +34,33 @@ const LeaveTravelAllowance = () => {
 
         <div className="flex px-8">
           <input className="input input-bordered" placeholder="0" />
+        </div>
+
+        <div className="p-6 max-sm:w-fit max-sm:p-0 max-sm:pt-3">
+          <div className="card card-body bg-base-100 shadow-xl max-sm:w-screen">
+            <div className="">
+              <table className="table">
+                {/* head */}
+                <thead>
+                  <tr className="bg-base-200">
+                    <th>Amount</th>
+                    <th>Travel Start Date</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* row 1 */}
+                  <tr>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Control Specialist</td>
+                    <td>Blue</td>
+                    <td>Blue</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </>
