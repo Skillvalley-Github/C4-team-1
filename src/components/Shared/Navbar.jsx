@@ -12,12 +12,17 @@ import { NavLink, Routes, Link, useLocation } from "react-router-dom";
 
 const Navbar = (props) => {
   // const {noOfNotifications, pageTitle} = useSelector(state => state.header)
-  const [currentTheme, setCurrentTheme] = useState(localStorage.getItem("theme"));
+  const [currentTheme, setCurrentTheme] = useState(
+    localStorage.getItem("theme"),
+  );
 
   useEffect(() => {
     themeChange(false);
     if (currentTheme === null) {
-      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
         setCurrentTheme("dark");
       } else {
         setCurrentTheme("light");
@@ -43,7 +48,8 @@ const Navbar = (props) => {
         <div className="">
           <label
             htmlFor="left-sidebar-drawer"
-            className="drawer-button ml-1 mr-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-2 text-center text-white focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 lg:hidden">
+            className="drawer-button ml-1 mr-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-2 text-center text-white focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 lg:hidden"
+          >
             <Bars3Icon className="inline-block h-5 w-5" />
           </label>
           <h1 className="ml-2 text-2xl font-semibold">{props.pageTitle}</h1>
@@ -67,12 +73,18 @@ const Navbar = (props) => {
             <SunIcon
               data-set-theme="light"
               data-act-class="ACTIVECLASS"
-              className={"h-6 w-6 fill-current " + (currentTheme === "dark" ? "swap-on" : "swap-off")}
+              className={
+                "h-6 w-6 fill-current " +
+                (currentTheme === "dark" ? "swap-on" : "swap-off")
+              }
             />
             <MoonIcon
               data-set-theme="dark"
               data-act-class="ACTIVECLASS"
-              className={"h-6 w-6 fill-current " + (currentTheme === "light" ? "swap-on" : "swap-off")}
+              className={
+                "h-6 w-6 fill-current " +
+                (currentTheme === "light" ? "swap-on" : "swap-off")
+              }
             />
           </label>
 
@@ -100,7 +112,8 @@ const Navbar = (props) => {
             </label>
             <ul
               tabIndex={0}
-              className="menu-compact menu dropdown-content rounded-box mt-3 w-52 bg-base-100 p-2 shadow">
+              className="menu-compact menu dropdown-content rounded-box mt-3 w-52 bg-base-100 p-2 shadow"
+            >
               <li className="justify-between">
                 <Link to={"/app/settings-profile"}>
                   Profile Settings

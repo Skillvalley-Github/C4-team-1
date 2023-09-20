@@ -4,9 +4,7 @@ import Layout from "../../components/Shared/Layout";
 const Task = () => {
   return (
     <>
-    
-        <div>task</div>
-   
+      <div>task</div>
     </>
   );
 };
