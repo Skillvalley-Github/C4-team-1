@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const PanDetails = () => {
-  return (
-    <div>PanDetails</div>
-  )
-}
+  return <div>PanDetails</div>;
+};
 
-export default PanDetails
+export default PanDetails;

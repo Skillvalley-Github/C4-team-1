@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const HomeLoan = () => {
-  return (
-    <div>HomeLoan</div>
-  )
-}
+  return <div>HomeLoan</div>;
+};
 
-export default HomeLoan
+export default HomeLoan;

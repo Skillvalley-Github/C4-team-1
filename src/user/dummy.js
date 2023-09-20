@@ -72,7 +72,8 @@ export const empData = () => {
       phone_number: "+221 948 605 2451",
       gender: "Female",
       PAN: "SA06 336B MOER 6WX7 IQB1 CB8Z",
-      designation: "neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean",
+      designation:
+        "neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean",
       DOB: "22/12/1958",
       father_name: "Lorrie MacAnespie",
       address: "0073 Forest Junction",
@@ -103,7 +104,8 @@ export const empData = () => {
       phone_number: "+63 747 543 0026",
       gender: "Male",
       PAN: "FR47 3744 4397 909W ZIMX LTMD 758",
-      designation: "auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl",
+      designation:
+        "auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl",
       DOB: "23/04/1998",
       father_name: "Emmery Jahnel",
       address: "50 Mallory Point",
@@ -142,7 +144,8 @@ export const empData = () => {
     },
     {
       emp_id: "01HA4R3Z5ZMPPKCF7CSAWF5GTR",
-      image: "https://robohash.org/rationeveritatisblanditiis.png?size=50x50&set=set1",
+      image:
+        "https://robohash.org/rationeveritatisblanditiis.png?size=50x50&set=set1",
       first_name: "Wrennie",
       last_name: "Epgrave",
       email: "wepgrave9@seattletimes.com",
@@ -181,7 +184,8 @@ export const empData = () => {
       phone_number: "+86 343 770 4332",
       gender: "Male",
       PAN: "KW91 NTSX VVPT RAV0 WYC2 ZZ1M PL2J 7O",
-      designation: "aenean lectus pellentesque eget nunc donec quis orci eget orci",
+      designation:
+        "aenean lectus pellentesque eget nunc donec quis orci eget orci",
       DOB: "13/05/2019",
       father_name: "Nickola Dallywater",
       address: "01 Sundown Alley",
@@ -189,7 +193,8 @@ export const empData = () => {
     },
     {
       emp_id: "01HA4R3Z630EQRGA6ZF53JKF35",
-      image: "https://robohash.org/reprehenderitquivelit.png?size=50x50&set=set1",
+      image:
+        "https://robohash.org/reprehenderitquivelit.png?size=50x50&set=set1",
       first_name: "Raymund",
       last_name: "Winham",
       email: "rwinhamc@gizmodo.com",
@@ -212,7 +217,8 @@ export const empData = () => {
       phone_number: "+33 771 761 1711",
       gender: "Male",
       PAN: "SA93 55QO DYWO 7I5C DM79 TUJK",
-      designation: "posuere felis sed lacus morbi sem mauris laoreet ut rhoncus",
+      designation:
+        "posuere felis sed lacus morbi sem mauris laoreet ut rhoncus",
       DOB: "01/02/1962",
       father_name: "Magnum Harber",
       address: "1 Bartelt Parkway",
@@ -297,7 +303,8 @@ export const empData = () => {
     },
     {
       emp_id: "01HA4R3Z6E94ED9Y3GR0BP4316",
-      image: "https://robohash.org/reprehenderitlaborecumque.png?size=50x50&set=set1",
+      image:
+        "https://robohash.org/reprehenderitlaborecumque.png?size=50x50&set=set1",
       first_name: "Grace",
       last_name: "Cuddehy",
       email: "gcuddehyj@trellian.com",

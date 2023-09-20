@@ -69,10 +69,13 @@ const EmployeeTable = () => {
   const [members, setMembers] = useState(TEAM_MEMBERS);
 
   const getRoleComponent = (role) => {
-    if (role === "Admin") return <div className="badge badge-secondary">{role}</div>;
+    if (role === "Admin")
+      return <div className="badge badge-secondary">{role}</div>;
     if (role === "Manager") return <div className="badge">{role}</div>;
-    if (role === "Owner") return <div className="badge badge-primary">{role}</div>;
-    if (role === "Support") return <div className="badge badge-accent">{role}</div>;
+    if (role === "Owner")
+      return <div className="badge badge-primary">{role}</div>;
+    if (role === "Support")
+      return <div className="badge badge-accent">{role}</div>;
     else return <div className="badge badge-ghost">{role}</div>;
   };
   return (

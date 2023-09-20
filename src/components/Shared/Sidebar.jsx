@@ -12,47 +12,56 @@ const Sidebar = () => {
     document.getElementById("left-sidebar-drawer").click();
   };
 
-  return ( <>
-   
-    <div className="drawer-side z-40 ">
-       
-      <label htmlFor="left-sidebar-drawer" className="drawer-overlay "></label>
-      <ul className="menu  w-72 h-screen bg-base-100 pt-2 text-base-content">
-        <button
-          className="btn btn-circle btn-ghost  absolute right-0 top-0 z-50 mr-2 mt-4 bg-base-300 lg:hidden"
-          onClick={() => close()}>
-          <XMarkIcon className="inline-block h-5 w-5" />
-        </button>
+  return (
+    <>
+      <div className="drawer-side z-40 ">
+        <label
+          htmlFor="left-sidebar-drawer"
+          className="drawer-overlay "
+        ></label>
+        <ul className="menu  w-72 h-screen bg-base-100 pt-2 text-base-content">
+          <button
+            className="btn btn-circle btn-ghost  absolute right-0 top-0 z-50 mr-2 mt-4 bg-base-300 lg:hidden"
+            onClick={() => close()}
+          >
+            <XMarkIcon className="inline-block h-5 w-5" />
+          </button>
 
-        <li className="mb-2 text-xl font-semibold ">
-          <Link to={"/welcome"}>
-            <img className="w-40" src={logo} alt="FusionSync Logo" />       
-          </Link>{" "}
-        </li>
-        {routes.map((route, k) => {
-          return (
-            <li className="w-full flex justify-items-end" key={k}>
-              {route.submenu ? (
-                <SidebarSubmenu {...route} />
+          <li className="mb-2 text-xl font-semibold ">
+            <Link to={"/welcome"}>
+              <img className="w-40" src={logo} alt="FusionSync Logo" />
+            </Link>{" "}
+          </li>
+          {routes.map((route, k) => {
+            return (
+              <li className="w-full flex justify-items-end" key={k}>
+                {route.submenu ? (
+                  <SidebarSubmenu {...route} />
                 ) : (
                   <NavLink
-                  end
-                  to={route.path}
-                  className={({ isActive }) => `${isActive ? "bg-base-200  font-semibold " : "font-normal"}`}>
-                  {route.icon} {route.name}
-                  {location.pathname === route.path ? (
-                    <span
-                      className="absolute inset-y-0 left-0 w-1 rounded-br-md rounded-tr-md bg-primary "
-                      aria-hidden="true"></span>
-                      ) : null}
-                </NavLink>
-              )}
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-</>
+                    end
+                    to={route.path}
+                    className={({ isActive }) =>
+                      `${
+                        isActive ? "bg-base-200  font-semibold " : "font-normal"
+                      }`
+                    }
+                  >
+                    {route.icon} {route.name}
+                    {location.pathname === route.path ? (
+                      <span
+                        className="absolute inset-y-0 left-0 w-1 rounded-br-md rounded-tr-md bg-primary "
+                        aria-hidden="true"
+                      ></span>
+                    ) : null}
+                  </NavLink>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </>
   );
 };
 
