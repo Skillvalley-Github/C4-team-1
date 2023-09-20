@@ -1,11 +1,11 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function FusionSync(){
-  return(
-      <>
-          <div>Welcome</div>
-      </>
-  )
+function FusionSync() {
+  return (
+    <>
+      <div>Welcome</div>
+    </>
+  );
 }
 
-export default FusionSync
+export default FusionSync;

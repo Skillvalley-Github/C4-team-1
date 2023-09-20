@@ -68,7 +68,9 @@ const INITIAL_INTEGRATION_LIST = [
 const Dashboard = () => {
   // const dispatch = useDispatch()
 
-  const [integrationList, setIntegrationList] = useState(INITIAL_INTEGRATION_LIST);
+  const [integrationList, setIntegrationList] = useState(
+    INITIAL_INTEGRATION_LIST,
+  );
 
   const updateIntegrationStatus = (index) => {
     let integration = integrationList[index];
@@ -76,7 +78,7 @@ const Dashboard = () => {
       integrationList.map((i, k) => {
         if (k === index) return { ...i, isActive: !i.isActive };
         return i;
-      })
+      }),
     );
     // dispatch(showNotification({message : `${integration.name} ${integration.isActive ? "disabled" : "enabled"}` , status : 1}))
   };
@@ -90,7 +92,11 @@ const Dashboard = () => {
               <div className="card mt-2 h-full w-full bg-base-100 p-6 shadow-xl transition duration-300 hover:scale-105">
                 <h2 className="mb-5 text-center font-bold">{i.name}</h2>
                 <p className="flex">
-                  <img alt="icon" src={i.icon} className="mr-4 inline-block h-12 w-12" />
+                  <img
+                    alt="icon"
+                    src={i.icon}
+                    className="mr-4 inline-block h-12 w-12"
+                  />
                   {i.description}
                 </p>
                 {/* <div className="mt-6 text-right">

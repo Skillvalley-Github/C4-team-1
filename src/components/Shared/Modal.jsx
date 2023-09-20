@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Modal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ function Modal() {
   };
 
   const handleOverlayClick = (e) => {
-    if (e.target.classList.contains('modal-overlay')) {
+    if (e.target.classList.contains("modal-overlay")) {
       closeModal();
     }
   };
@@ -37,7 +37,8 @@ function Modal() {
                 Congratulations random Internet user!
               </h3>
               <p className="py-4">
-                You've been selected for a chance to get one year of subscription to use Wikipedia for free!
+                You've been selected for a chance to get one year of
+                subscription to use Wikipedia for free!
               </p>
               <div className="modal-action">
                 <button

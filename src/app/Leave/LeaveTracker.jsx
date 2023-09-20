@@ -4,9 +4,7 @@ import Layout from "../../components/Shared/Layout";
 const LeaveTracker = () => {
   return (
     <>
-   
-        <div>Leavetracker</div>
-    
+      <div>Leavetracker</div>
     </>
   );
 };
