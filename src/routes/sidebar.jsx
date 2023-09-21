@@ -33,7 +33,7 @@ const routes = [
   {
     path: "/employeedata", // url
     icon: <UsersIcon className={iconClasses} />, // icon component
-    name: "Employee Management", // name that appear in Sidebar
+    name: "Team", // name that appear in Sidebar
   },
   {
     path: "", // url

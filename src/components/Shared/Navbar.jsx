@@ -1,5 +1,5 @@
 import { themeChange } from "theme-change";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import BellIcon from "@heroicons/react/24/outline/BellIcon";
 import Bars3Icon from "@heroicons/react/24/outline/Bars3Icon";
 import MoonIcon from "@heroicons/react/24/outline/MoonIcon";
@@ -10,11 +10,27 @@ import profilePhoto from "../../assets/images/profile-photo.png";
 
 import { NavLink, Routes, Link, useLocation } from "react-router-dom";
 
-const Navbar = (props) => {
+const Navbar = () => {
   // const {noOfNotifications, pageTitle} = useSelector(state => state.header)
   const [currentTheme, setCurrentTheme] = useState(
     localStorage.getItem("theme"),
   );
+
+  const [pageTitle, setPageTitle]  = useState("");
+  const currentRoute = useLocation().pathname;
+
+  useEffect(()=>{
+    if(currentRoute==="/") setPageTitle("Dashboard")
+    else if(currentRoute==="/employeedata") setPageTitle("Team")
+    else if(currentRoute==="/payroll/taxdeductions") setPageTitle("Tax Deductions")
+    else if(currentRoute==="/payroll/reimbursements") setPageTitle("Reimbursements")
+    else if(currentRoute==="/payroll/settings") setPageTitle("Payroll Settings")
+    else if(currentRoute==="/attendance") setPageTitle("Attendance")
+    else if(currentRoute==="/leaveTracker") setPageTitle("Leave Tracker")
+    else if(currentRoute==="/tasks") setPageTitle("Tasks")
+    else if(currentRoute==="/app/settings-profile") setPageTitle("Profile Setting")
+    else setPageTitle("")
+  })
 
   useEffect(() => {
     themeChange(false);
@@ -52,7 +68,7 @@ const Navbar = (props) => {
           >
             <Bars3Icon className="inline-block h-5 w-5" />
           </label>
-          <h1 className="ml-2 text-2xl font-semibold">{props.pageTitle}</h1>
+          <h1 className={`ml-2 text-2xl font-semibold` + (pageTitle.length>10 ? "ml-2 max-sm:text-base font-semibold" : "")}>{pageTitle}</h1>
         </div>
 
         <div className="order-last">
