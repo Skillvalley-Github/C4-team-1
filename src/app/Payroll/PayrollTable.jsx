@@ -17,10 +17,10 @@ const PayrollTable = ({ title, columns, rows, buttonLink }) => {
         </div>
       </div>
 
-      <div className="p-6 max-sm:w-fit max-sm:p-0 max-sm:pt-3">
-        <div className="card card-body bg-base-100 shadow-xl max-sm:w-screen ">
+      <div className="flex flex-col overflow-x-auto p-6  max-sm:p-0 max-sm:pt-3">
+        <div className="card card-body bg-base-100 shadow-xl min-w-full ">
           <div className="overflow-x-auto">
-            <table className="table">
+            <table className="table min-w-full">
               {/* head */}
               <thead className="text-xl">
                 <tr>
