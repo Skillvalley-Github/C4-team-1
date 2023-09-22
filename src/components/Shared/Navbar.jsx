@@ -29,6 +29,11 @@ const Navbar = () => {
     else if(currentRoute==="/leaveTracker") setPageTitle("Leave Tracker")
     else if(currentRoute==="/tasks") setPageTitle("Tasks")
     else if(currentRoute==="/app/settings-profile") setPageTitle("Profile Setting")
+    else if(currentRoute==="/payroll/taxdeductions/regime-selection") setPageTitle("Regime Selection")
+    else if(currentRoute==="/payroll/taxdeductions/home-rent") setPageTitle("Home Rent")
+    else if(currentRoute==="/payroll/taxdeductions/section-80-deductions") setPageTitle("Section-80 Deductions")
+    else if(currentRoute==="/payroll/taxdeductions/home-loan") setPageTitle("Home Loan")
+    else if(currentRoute==="/payroll/taxdeductions/leave-travel-allowance") setPageTitle("Leave Travel Allowance")
     else setPageTitle("")
   })
 
