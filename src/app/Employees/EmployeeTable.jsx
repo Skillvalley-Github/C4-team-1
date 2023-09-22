@@ -1,96 +1,63 @@
 import React, { useEffect, useState } from "react";
-// import { empData } from '../../user/dummy2'
-import moment from "moment";
+import { Link } from "react-router-dom";
+import EmployeeData from './EmployeeData.json'
+import InputText from "../../components/Input/InputText";
+import CustomButton from "../../components/Shared/CustomButton";
 
-const TEAM_MEMBERS = [
-  {
-    name: "Alex",
-    avatar: "https://reqres.in/img/faces/1-image.jpg",
-    email: "alex@dashwind.com",
-    role: "Owner",
-    joinedOn: moment(new Date())
-      .add(-5 * 1, "days")
-      .format("DD MMM YYYY"),
-    lastActive: "5 hr ago",
-  },
-  {
-    name: "Ereena",
-    avatar: "https://reqres.in/img/faces/2-image.jpg",
-    email: "ereena@dashwind.com",
-    role: "Admin",
-    joinedOn: moment(new Date())
-      .add(-5 * 2, "days")
-      .format("DD MMM YYYY"),
-    lastActive: "15 min ago",
-  },
-  {
-    name: "John",
-    avatar: "https://reqres.in/img/faces/3-image.jpg",
-    email: "jhon@dashwind.com",
-    role: "Admin",
-    joinedOn: moment(new Date())
-      .add(-5 * 3, "days")
-      .format("DD MMM YYYY"),
-    lastActive: "20 hr ago",
-  },
-  {
-    name: "Matrix",
-    avatar: "https://reqres.in/img/faces/4-image.jpg",
-    email: "matrix@dashwind.com",
-    role: "Manager",
-    joinedOn: moment(new Date())
-      .add(-5 * 4, "days")
-      .format("DD MMM YYYY"),
-    lastActive: "1 hr ago",
-  },
-  {
-    name: "Virat",
-    avatar: "https://reqres.in/img/faces/5-image.jpg",
-    email: "virat@dashwind.com",
-    role: "Support",
-    joinedOn: moment(new Date())
-      .add(-5 * 5, "days")
-      .format("DD MMM YYYY"),
-    lastActive: "40 min ago",
-  },
-  {
-    name: "Miya",
-    avatar: "https://reqres.in/img/faces/6-image.jpg",
-    email: "miya@dashwind.com",
-    role: "Support",
-    joinedOn: moment(new Date())
-      .add(-5 * 7, "days")
-      .format("DD MMM YYYY"),
-    lastActive: "5 hr ago",
-  },
-];
 
 const EmployeeTable = () => {
-  const [members, setMembers] = useState(TEAM_MEMBERS);
+  const [members, setMembers] = useState(EmployeeData);
 
   const getRoleComponent = (role) => {
-    if (role === "Admin")
-      return <div className="badge badge-secondary">{role}</div>;
+    if (role === "Admin") return <div className="badge badge-secondary">{role}</div>;
     if (role === "Manager") return <div className="badge">{role}</div>;
-    if (role === "Owner")
-      return <div className="badge badge-primary">{role}</div>;
-    if (role === "Support")
-      return <div className="badge badge-accent">{role}</div>;
+    if (role === "Owner") return <div className="badge badge-primary">{role}</div>;
+    if (role === "Support") return <div className="badge badge-accent">{role}</div>;
     else return <div className="badge badge-ghost">{role}</div>;
   };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleOverlayClick = (e) => {
+    if (e.target.classList.contains("modal-overlay")) {
+      closeModal();
+    }
+  };
+
   return (
     <>
       {/* Team Member list in table format loaded constant */}
       <div className="card m-5 bg-base-100 p-6 shadow-xl">
+        <div className=" mb-5 flex items-center justify-end">
+          <button
+            className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600"
+            onClick={openModal}>
+            Add Employee
+          </button>
+        </div>
         <div className="overflow-x-auto">
-          <table className="table ">
+          <table className="table mb-3">
             <thead>
               <tr>
                 <th>Name</th>
+                <th>Employee ID</th>
                 <th>Email ID</th>
-                <th>Joined On</th>
+                <th>Phone Number</th>
+                <th>Gender</th>
                 <th>Role</th>
-                <th>Last Active</th>
+                <th>PAN</th>
+                <th>Address</th>
+                <th>Date of Birth</th>
+                <th>Date of Joining</th>
+                <th>Father's Name</th>
               </tr>
             </thead>
             <tbody>
@@ -98,27 +65,69 @@ const EmployeeTable = () => {
                 return (
                   <tr key={k}>
                     <td>
-                      <div className="flex items-center space-x-3">
-                        <div className="avatar">
-                          <div className="mask mask-circle h-12 w-12">
-                            <img src={l.avatar} alt="Avatar" />
+                      <Link to={"/app/settings-profile"}>
+                        <div className="flex w-44 items-center space-x-3">
+                          <div className="avatar">
+                            <div className="mask mask-circle h-12 w-12">
+                              <img src={l.avatar} alt="Avatar" />
+                            </div>
+                          </div>
+                          <div>
+                            <div className="font-bold hover:underline">{l.f_name + " " + l.l_name}</div>
                           </div>
                         </div>
-                        <div>
-                          <div className="font-bold">{l.name}</div>
-                        </div>
-                      </div>
+                      </Link>
                     </td>
+                    <td>{l.emp_id}</td>
                     <td>{l.email}</td>
-                    <td>{l.joinedOn}</td>
+                    <td>{l.phone_num}</td>
+                    <td>{l.gender}</td>
                     <td>{getRoleComponent(l.role)}</td>
-                    <td>{l.lastActive}</td>
+                    <td>{l.pan_num}</td>
+                    <div className="w-48">
+                      <td>{l.address}</td>
+                    </div>
+                    <td>{l.dob}</td>
+                    <td>{l.doj}</td>
+                    <td>{l.father_name}</td>
                   </tr>
                 );
               })}
             </tbody>
           </table>
         </div>
+        {isOpen && (
+          <div
+            className="modal-overlay fixed left-20 top-0 flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-50"
+            onClick={handleOverlayClick}>
+            <div className="modal-container z-50 mx-auto w-11/12 overflow-y-auto rounded bg-white shadow-lg md:max-w-md">
+              <div className="modal-content px-6 py-4 text-left">
+                <h3 className="text-center text-lg font-bold text-gray-900">Add New Employee Here!</h3>
+                <InputText
+                  type="text"
+                  updateType="first_name"
+                  containerStyle="mt-4"
+                  labelTitle="First Name"
+                />
+
+                <InputText type="text" updateType="last_name" containerStyle="mt-4" labelTitle="Last Name" />
+
+                <InputText type="email" updateType="email" containerStyle="mt-4" labelTitle="Email Id" />
+
+                <div className="modal-action">
+                  <div className="modal-action">
+                    <button className="btn btn-ghost" onClick={() => closeModal()}>
+                      Cancel
+                    </button>
+                    <button className="btn btn-primary px-6" onClick={() => saveNewLead()}>
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
