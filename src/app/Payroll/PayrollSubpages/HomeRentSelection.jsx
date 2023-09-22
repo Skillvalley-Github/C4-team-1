@@ -21,7 +21,6 @@ const HomeRentSelection = () => {
             <br /> You can generate rent receipts a here, and submit them as proof. However, they must be
             signed by your landlord.
             <br />
-          
             <br />
             For your current rented accommodation, leave the "to month" blank. To enter multiple rents, enter
             the first, press Continue and come back to this page. A metro city implies Chennai, Kolkata,
@@ -36,12 +35,12 @@ const HomeRentSelection = () => {
           <PlusIcon className="h-6 w-6" />
         </button>
       </div>
-      <div className="px-6 py-2 max-sm:w-fit max-sm:p-0 max-sm:pt-3">
-        <div className="card card-body bg-base-100 shadow-xl max-sm:w-screen">
-          <div className=" flex">
-            <table className="table">
+      <div className="flex flex-col overflow-x-auto p-6  max-sm:p-0 max-sm:pt-3">
+        <div className="card card-body min-w-full bg-base-100 shadow-xl ">
+          <div className="overflow-x-auto">
+            <table className="table min-w-full ">
               {/* head */}
-              <thead className="text text-lg font-bold">
+              <thead className="text text-sm font-bold">
                 <tr className="bg-base-200">
                   <th>Monthly Rent Amount</th>
                   <th>From Month (yyyy-mm)</th>
@@ -54,9 +53,9 @@ const HomeRentSelection = () => {
               </thead>
               <tbody>
                 {/* row 1 */}
-                <tr>
+                <tr className="">
                   <td>
-                    <input className="input input-bordered" placeholder="₹" type="number" min="0" />
+                    <input className="input input-bordered " placeholder="₹" type="number" min="0" />
                   </td>
                   <td>
                     <input className="input input-bordered" placeholder="(yyyy-mm)" type="calendar" />
@@ -86,6 +85,8 @@ const HomeRentSelection = () => {
           </div>
         </div>
       </div>
+
+   
     </>
   );
 };
