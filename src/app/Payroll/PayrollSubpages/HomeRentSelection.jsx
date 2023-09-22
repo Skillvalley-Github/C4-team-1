@@ -1,5 +1,6 @@
 import React from "react";
 import PlusIcon from "@heroicons/react/24/outline/PlusIcon";
+import { Link } from "react-router-dom";
 
 const HomeRentSelection = () => {
   return (
@@ -17,8 +18,8 @@ const HomeRentSelection = () => {
             <br /> - You must be able to provide the rent receipts and/or rent agreement as proof
             <br /> - If your rent is above Rs 1 lakh per annum, you have to submit your landlord's PAN
             <br />
-            <br /> You can generate rent receipts here, and submit them as proof. However, they must be signed
-            by your landlord.
+            <br /> You can generate rent receipts a here, and submit them as proof. However, they must be
+            signed by your landlord.
             <br />
             <br />
             For your current rented accommodation, leave the "to month" blank. To enter multiple rents, enter
@@ -34,6 +35,58 @@ const HomeRentSelection = () => {
           <PlusIcon className="h-6 w-6" />
         </button>
       </div>
+      <div className="flex flex-col overflow-x-auto p-6  max-sm:p-0 max-sm:pt-3">
+        <div className="card card-body min-w-full bg-base-100 shadow-xl ">
+          <div className="overflow-x-auto">
+            <table className="table min-w-full ">
+              {/* head */}
+              <thead className="text text-sm font-bold">
+                <tr className="bg-base-200">
+                  <th>Monthly Rent Amount</th>
+                  <th>From Month (yyyy-mm)</th>
+                  <th>To Month (yyyy-mm)</th>
+                  <th>Landlord Name</th>
+                  <th>Landlord PAN</th>
+                  <th>Landlord Address</th>
+                  <th>Metro</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* row 1 */}
+                <tr className="">
+                  <td>
+                    <input className="input input-bordered " placeholder="₹" type="number" min="0" />
+                  </td>
+                  <td>
+                    <input className="input input-bordered" placeholder="(yyyy-mm)" type="calendar" />
+                  </td>
+                  <td>
+                    <input className="input input-bordered" placeholder="(yyyy-mm)" type="text" />
+                  </td>
+                  <td>
+                    <input className="input input-bordered" placeholder="	Landlord Name" type="text" />
+                  </td>
+                  <td>
+                    <input className="input input-bordered" placeholder="	Landlord PAN" type="text" />
+                  </td>
+                  <td>
+                    <input className="input input-bordered" placeholder="Landlord Address" type="text" />
+                  </td>
+                  <td>
+                    <input className="input input-bordered" placeholder="Destination Place" type="checkbox" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="text flex flex-col p-3 text-xl font-semibold">
+            <p className="flex p-4">Upload the proofs : </p>
+            <input type="file" className="file-input file-input-bordered w-full max-w-xs" />
+          </div>
+        </div>
+      </div>
+
+   
     </>
   );
 };

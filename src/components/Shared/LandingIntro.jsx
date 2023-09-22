@@ -12,7 +12,11 @@ function LandingIntro() {
           </div>
 
           <div className="my-12 text-center">
-            <img src={introImg} alt="Dashwind Admin Template" className="inline-block w-48"></img>
+            <img
+              src={introImg}
+              alt="Dashwind Admin Template"
+              className="inline-block w-48"
+            ></img>
           </div>
 
           <Intro />

@@ -28,19 +28,37 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/app/404" element={<InternalPage />} />
-        <Route  path="/welcome" element={<FusionSync />} />
+        <Route path="/welcome" element={<FusionSync />} />
         <Route path="/" element={<Layout />}>
           <Route index path="/" element={<Dashboard />} />
           <Route path="/attendance" element={<Attendance />} />
           <Route path="/payroll/*" element={<Payroll />} />
           <Route path="/payroll/taxdeductions" element={<TaxDeductions />} />
           {/* ---------------Payroll different tax deductions routes--------------------------------- */}
-          <Route path="/payroll/taxdeductions/regime-selection" element={<RegimeSelection />} />
-          <Route path="/payroll/taxdeductions/home-rent" element={<HomeRentSelection />} />
-          <Route path="/payroll/taxdeductions/section-80-deductions" element={<Section80Deductions />} />
-          <Route path="/payroll/taxdeductions/home-loan" element={<HomeLoan />} />
-          <Route path="/payroll/taxdeductions/leave-travel-allowance" element={<LeaveTravelAllowance />} />
-          <Route path="/payroll/taxdeductions/pan-details" element={<PanDetails />} />
+          <Route
+            path="/payroll/taxdeductions/regime-selection"
+            element={<RegimeSelection />}
+          />
+          <Route
+            path="/payroll/taxdeductions/home-rent"
+            element={<HomeRentSelection />}
+          />
+          <Route
+            path="/payroll/taxdeductions/section-80-deductions"
+            element={<Section80Deductions />}
+          />
+          <Route
+            path="/payroll/taxdeductions/home-loan"
+            element={<HomeLoan />}
+          />
+          <Route
+            path="/payroll/taxdeductions/leave-travel-allowance"
+            element={<LeaveTravelAllowance />}
+          />
+          <Route
+            path="/payroll/taxdeductions/pan-details"
+            element={<PanDetails />}
+          />
           {/* --------------------tax deductions routes ends here---------------------------- */}
           <Route path="/payroll/reimbursements" element={<Reimbursements />} />
           <Route path="/payroll/reimbursements" element={<Reimbursements />} />

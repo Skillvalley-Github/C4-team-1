@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const RegimeSelection = () => {
-  return (
-    <div>RegimeSelection</div>
-  )
-}
+  return <div>RegimeSelection</div>;
+};
 
-export default RegimeSelection
+export default RegimeSelection;
