@@ -9,6 +9,12 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import BasicDatePicker from "../../utils/BasicDatePicker";
+import dayjs from "dayjs";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { DateField } from "@mui/x-date-pickers/DateField";
 
 const Task = () => {
   const [open, setOpen] = useState(false);
@@ -18,6 +24,9 @@ const Task = () => {
   const [assignedBy, setAssignedBy] = useState("");
   const [status, setStatus] = useState("");
   const [importanceLevel, setImportanceLevel] = useState("");
+  const [value, setValue] = useState(dayjs());
+  const [value1, setValue1] = useState(dayjs());
+  const [modifiedDate, setModifiedDate] = useState("");
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -25,16 +34,32 @@ const Task = () => {
 
   const handleClose = () => {
     console.log(taskName);
-    console.log(fromDate.toISOString()); // Convert the stored date to ISO format
-    console.log(toDate.toISOString());   // Convert the stored date to ISO format
+    console.log(fromDate);
+    console.log(toDate);
     console.log(assignedBy);
     console.log(status);
     console.log(importanceLevel);
     setOpen(false);
   };
 
-  // You can update the state variables as needed when user input changes
 
+  const handleDateFromChange = (newValue) => {
+    // Update both value and fromDate states
+    setValue(newValue);
+    setFromDate(formatDate(newValue.$d));
+  };
+
+  const handleDateToChange = (newValue) => {
+    // Update both value and fromDate states
+    setValue1(newValue);
+    setToDate(formatDate(newValue.$d));
+  };
+  const formatDate = (date) => {
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = (date.getMonth() + 1).toString().padStart(2, "0"); // Note: Months are zero-based
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
   return (
     <>
       <div>task</div>
@@ -57,15 +82,30 @@ const Task = () => {
               onChange={(e) => setTaskName(e.target.value)}
             />
             <label>From</label>
-            <BasicDatePicker
+            {/* <BasicDatePicker
               value={fromDate}
               onChange={(date) => setFromDate(date)}
-            />
+            /> */}
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoContainer components={["DatePicker", "DatePicker"]}>
+                <DatePicker
+                  label="Controlled picker"
+                  value={value}
+                  onChange={handleDateFromChange}
+                />
+              </DemoContainer>
+            </LocalizationProvider>
+
             <label>To</label>
-            <BasicDatePicker
-              value={toDate}
-              onChange={(date) => setToDate(date)}
-            />
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoContainer components={["DatePicker", "DatePicker"]}>
+                <DatePicker
+                  label="Controlled picker"
+                  value={value1}
+                  onChange={handleDateToChange}
+                />
+              </DemoContainer>
+            </LocalizationProvider>
             <TextField
               autoFocus
               margin="dense"
