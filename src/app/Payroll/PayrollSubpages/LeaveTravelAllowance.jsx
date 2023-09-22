@@ -1,6 +1,7 @@
 import React from "react";
 
 import PayrollTable from "../PayrollTable";
+import leaveTravelAllowance from "../../../user/leaveTravelAllowance.json";
 
 const LeaveTravelAllowance = () => {
   return (
@@ -39,10 +40,10 @@ const LeaveTravelAllowance = () => {
         <div className="text text-md flex flex-row justify-start px-8 py-6 font-bold">
           <h1>LTA claims in 2022-2025 :</h1>
         </div>
-        <div className="px-6 py-2 max-sm:w-fit max-sm:p-0 max-sm:pt-3">
-          <div className="card card-body bg-base-100 shadow-xl max-sm:w-screen">
-            <div className=" flex">
-              <table className="min-w-full table">
+        <div className="flex flex-col overflow-x-auto px-6 px-2 max-sm:p-0 max-sm:pt-3">
+          <div className="card card-body min-w-full bg-base-100 shadow-xl ">
+            <div className="overflow-x-auto">
+              <table className="table min-w-full">
                 {/* head */}
                 <thead className="text text-lg font-bold">
                   <tr className="bg-base-200">
@@ -77,6 +78,8 @@ const LeaveTravelAllowance = () => {
             </div>
           </div>
         </div>
+
+     
         <div className="flex p-8 drop-shadow-md">
           <button className=" text rounded-md bg-sky-500 px-12 py-3 text-lg font-semibold text-gray-200 hover:bg-sky-600 ">
             Continue
