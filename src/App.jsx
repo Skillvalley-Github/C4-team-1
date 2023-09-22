@@ -45,7 +45,9 @@ const App = () => {
           <Route path="/payroll/reimbursements" element={<Reimbursements />} />
           <Route path="/payroll/reimbursements" element={<Reimbursements />} />
           <Route path="/payroll/settings" element={<PayrollSettings />} />
+          {/* ---------------tasks------------ */}
           <Route path="/tasks" element={<Tasks />} />
+          {/* -------------tasks ends here------------- */}
           <Route path="/leavetracker" element={<LeaveTracker />} />
           <Route path="/employeedata" element={<EmployeeData />} />
           <Route path="/app/settings-profile" element={<EditProfile />} />
