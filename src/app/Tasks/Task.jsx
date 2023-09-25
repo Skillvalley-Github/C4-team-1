@@ -27,21 +27,35 @@ const Task = () => {
   const [value, setValue] = useState(dayjs());
   const [value1, setValue1] = useState(dayjs());
   const [modifiedDate, setModifiedDate] = useState("");
+  const [data, setData] = useState([]);
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
   const handleClose = () => {
-    console.log(taskName);
-    console.log(fromDate);
-    console.log(toDate);
-    console.log(assignedBy);
-    console.log(status);
-    console.log(importanceLevel);
+    // console.log(taskName);
+    // console.log(fromDate);
+    // console.log(toDate);
+    // console.log(assignedBy);
+    // console.log(status);
+    // console.log(importanceLevel);
     setOpen(false);
   };
 
+  const handleSave = () => {
+    const obj = {
+      taskName: taskName,
+      fromDate: fromDate,
+      toDate: toDate,
+      assignedBy: assignedBy,
+      status: status,
+      importanceLevel: importanceLevel,
+    };
+    let arr = [...data, obj];
+    setData(arr);
+    setOpen(false);
+  };
 
   const handleDateFromChange = (newValue) => {
     // Update both value and fromDate states
@@ -62,7 +76,6 @@ const Task = () => {
   };
   return (
     <>
-      <div>task</div>
       <div>
         <Button variant="outlined" onClick={handleClickOpen}>
           ➕ ADD TASK
@@ -88,22 +101,14 @@ const Task = () => {
             /> */}
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={["DatePicker", "DatePicker"]}>
-                <DatePicker
-                  label="Controlled picker"
-                  value={value}
-                  onChange={handleDateFromChange}
-                />
+                <DatePicker label="Controlled picker" value={value} onChange={handleDateFromChange} />
               </DemoContainer>
             </LocalizationProvider>
 
             <label>To</label>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={["DatePicker", "DatePicker"]}>
-                <DatePicker
-                  label="Controlled picker"
-                  value={value1}
-                  onChange={handleDateToChange}
-                />
+                <DatePicker label="Controlled picker" value={value1} onChange={handleDateToChange} />
               </DemoContainer>
             </LocalizationProvider>
             <TextField
@@ -142,11 +147,67 @@ const Task = () => {
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose}>Cancel</Button>
-            <Button onClick={handleClose}>Save Changes</Button>
+            <Button onClick={handleSave}>Save Changes</Button>
           </DialogActions>
         </Dialog>
       </div>
-      <div>task</div>
+      {/* {data.length > 0 && (
+        <table>
+          <thead>
+            <tr>
+              <th>Task Name</th>
+              <th>From Date</th>
+              <th>To Date</th>
+              <th>Assigned By</th>
+              <th>Status</th>
+              <th>Importance Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item, index) => (
+              <tr key={index}>
+                <td>{item.taskName}</td>
+                <td>{item.fromDate}</td>
+                <td>{item.toDate}</td>
+                <td>{item.assignedBy}</td>
+                <td>{item.status}</td>
+                <td>{item.importanceLevel}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )} */}
+
+      {data.length > 0 && (
+        <div className="overflow-x-auto">
+          <table className="table">
+            {/* head */}
+            <thead>
+              <tr className="hover">
+              <th>Task Name</th>
+              <th>From Date</th>
+              <th>To Date</th>
+              <th>Assigned By</th>
+              <th>Status</th>
+              <th>Importance Level</th>
+              </tr>
+            </thead>
+            <tbody>
+            {data.map((item, index) => (
+              <tr key={index} className="hover">
+                <td>{item.taskName}</td>
+                <td>{item.fromDate}</td>
+                <td>{item.toDate}</td>
+                <td>{item.assignedBy}</td>
+                <td>{item.status}</td>
+                <td>{item.importanceLevel}</td>
+                <td className="hover-pointer">❌</td>
+              </tr>
+            ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </>
   );
 };
