@@ -19,6 +19,7 @@ import HomeLoan from "./app/Payroll/PayrollSubpages/HomeLoan";
 import LeaveTravelAllowance from "./app/Payroll/PayrollSubpages/LeaveTravelAllowance";
 import PanDetails from "./app/Payroll/PayrollSubpages/PanDetails";
 import EditProfile from "./app/Profile/EditProfile";
+import ProfileSection from "./app/Profile/ProfileSection";
 import InternalPage from "./app/Protected/404";
 
 const App = () => {
@@ -31,7 +32,10 @@ const App = () => {
         <Route path="/welcome" element={<FusionSync />} />
         <Route path="/" element={<Layout />}>
           <Route index path="/" element={<Dashboard />} />
-          <Route path="/attendance" element={<Attendance />} />
+          <Route path="/attendance" element={<Attendance />} /> 
+          <Route path="/profile" element={<ProfileSection />} />
+          {/* ---------------Profile different routes--------------------------------- */}
+          
           <Route path="/payroll/*" element={<Payroll />} />
           <Route path="/payroll/taxdeductions" element={<TaxDeductions />} />
           {/* ---------------Payroll different tax deductions routes--------------------------------- */}
