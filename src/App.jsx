@@ -18,7 +18,6 @@ import Section80Deductions from "./app/Payroll/PayrollSubpages/Section80Deductio
 import HomeLoan from "./app/Payroll/PayrollSubpages/HomeLoan";
 import LeaveTravelAllowance from "./app/Payroll/PayrollSubpages/LeaveTravelAllowance";
 import PanDetails from "./app/Payroll/PayrollSubpages/PanDetails";
-import EditProfile from "./app/Profile/EditProfile";
 import ProfileSection from "./app/Profile/ProfileSection";
 import InternalPage from "./app/Protected/404";
 
@@ -33,9 +32,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index path="/" element={<Dashboard />} />
           <Route path="/attendance" element={<Attendance />} /> 
-          <Route path="/profile" element={<ProfileSection />} />
-          {/* ---------------Profile different routes--------------------------------- */}
-          
+          <Route path="/profile" element={<ProfileSection />}/>
           <Route path="/payroll/*" element={<Payroll />} />
           <Route path="/payroll/taxdeductions" element={<TaxDeductions />} />
           {/* ---------------Payroll different tax deductions routes--------------------------------- */}
@@ -72,7 +69,6 @@ const App = () => {
           {/* -------------tasks ends here------------- */}
           <Route path="/leavetracker" element={<LeaveTracker />} />
           <Route path="/employeedata" element={<EmployeeData />} />
-          <Route path="/app/settings-profile" element={<EditProfile />} />
         </Route>
       </Routes>
     </Router>
