@@ -159,7 +159,7 @@ const ProfileSection = () => {
         </ul>
         <hr className="h-px w-full border-neutral-200" />
 
-      <div>{activeTab === "overview" && <Overview/>} {activeTab === "salary" && <Salary/>} {activeTab === "payslips" && <Payslip/>} {activeTab === "forms" && <Forms/>} {activeTab === "settings" && <ProfileSettings/>}</div>
+      <div>{activeTab === "overview" && <Overview/>} {activeTab === "salary" && <Salary/>} {activeTab === "payslip" && <Payslip/>} {activeTab === "forms" && <Forms/>} {activeTab === "settings" && <ProfileSettings/>}</div>
       </div>
     </div>
   );
