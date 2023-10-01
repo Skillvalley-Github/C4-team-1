@@ -57,6 +57,9 @@ const Task = () => {
     setOpen(false);
   };
 
+  const handleDelete=()=>{
+    
+  }
   const handleDateFromChange = (newValue) => {
     // Update both value and fromDate states
     setValue(newValue);
@@ -95,20 +98,16 @@ const Task = () => {
               onChange={(e) => setTaskName(e.target.value)}
             />
             <label>From</label>
-            {/* <BasicDatePicker
-              value={fromDate}
-              onChange={(date) => setFromDate(date)}
-            /> */}
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={["DatePicker", "DatePicker"]}>
-                <DatePicker label="Controlled picker" value={value} onChange={handleDateFromChange} />
+                <DatePicker label="Select Date" value={value} onChange={handleDateFromChange} />
               </DemoContainer>
             </LocalizationProvider>
 
             <label>To</label>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={["DatePicker", "DatePicker"]}>
-                <DatePicker label="Controlled picker" value={value1} onChange={handleDateToChange} />
+                <DatePicker label="Select Date" value={value1} onChange={handleDateToChange} />
               </DemoContainer>
             </LocalizationProvider>
             <TextField
@@ -151,61 +150,42 @@ const Task = () => {
           </DialogActions>
         </Dialog>
       </div>
-      {/* {data.length > 0 && (
-        <table>
-          <thead>
-            <tr>
-              <th>Task Name</th>
-              <th>From Date</th>
-              <th>To Date</th>
-              <th>Assigned By</th>
-              <th>Status</th>
-              <th>Importance Level</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((item, index) => (
-              <tr key={index}>
-                <td>{item.taskName}</td>
-                <td>{item.fromDate}</td>
-                <td>{item.toDate}</td>
-                <td>{item.assignedBy}</td>
-                <td>{item.status}</td>
-                <td>{item.importanceLevel}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )} */}
-
       {data.length > 0 && (
-        <div className="overflow-x-auto">
-          <table className="table">
-            {/* head */}
-            <thead>
-              <tr className="hover">
-              <th>Task Name</th>
-              <th>From Date</th>
-              <th>To Date</th>
-              <th>Assigned By</th>
-              <th>Status</th>
-              <th>Importance Level</th>
-              </tr>
-            </thead>
-            <tbody>
-            {data.map((item, index) => (
-              <tr key={index} className="hover">
-                <td>{item.taskName}</td>
-                <td>{item.fromDate}</td>
-                <td>{item.toDate}</td>
-                <td>{item.assignedBy}</td>
-                <td>{item.status}</td>
-                <td>{item.importanceLevel}</td>
-                <td className="hover-pointer">❌</td>
-              </tr>
-            ))}
-            </tbody>
-          </table>
+        <div className="flex flex-col overflow-x-auto p-6  max-sm:p-0 max-sm:pt-3">
+          <div className="card card-body min-w-full bg-base-100 shadow-xl ">
+            <div className="overflow-x-auto">
+                <div className="overflow-x-auto">
+                  <table className="table">
+                    {/* head */}
+                    <thead>
+                      <tr className="hover">
+                        <th>Task Name</th>
+                        <th>From Date</th>
+                        <th>To Date</th>
+                        <th>Assigned By</th>
+                        <th>Status</th>
+                        <th>Importance Level</th>
+                        <td></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {data.map((item, index) => (
+                        <tr key={index} className="hover">
+                          <td>{item.taskName}</td>
+                          <td>{item.fromDate}</td>
+                          <td>{item.toDate}</td>
+                          <td>{item.assignedBy}</td>
+                          <td>{item.status}</td>
+                          <td>{item.importanceLevel}</td>
+                          <td className="hover-pointer">❌</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              
+            </div>
+          </div>
         </div>
       )}
     </>
