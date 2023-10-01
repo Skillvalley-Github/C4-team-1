@@ -98,7 +98,7 @@ const EmployeeTable = () => {
         </div>
         {isOpen && (
           <div
-            className="modal-overlay fixed left-20 top-0 flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-50"
+            className="modal-overlay fixed left-20 max-sm:left-0 top-0 flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-50"
             onClick={handleOverlayClick}>
             <div className="modal-container z-50 mx-auto w-11/12 overflow-y-auto rounded bg-white shadow-lg md:max-w-md">
               <div className="modal-content px-6 py-4 text-left">
