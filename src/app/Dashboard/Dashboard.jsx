@@ -12,6 +12,7 @@ import payrollSettings from "./icons/payroll-settings.png";
 import attendance from "./icons/attendance.png";
 import leave from "./icons/leave.png";
 import task from "./icons/task.png";
+import profile from "./icons/profile.png";
 
 const INITIAL_INTEGRATION_LIST = [
   {
@@ -63,6 +64,13 @@ const INITIAL_INTEGRATION_LIST = [
       "Stay organized and efficient with our tasks section. Assign, track, and manage work seamlessly, ensuring productivity and collaboration.",
     link: "/tasks",
   },
+  {
+    name: "Profile",
+    icon: profile,
+    description:
+      "Easily access and update your details, view salary information, access payslips, submit forms, and configure settings all at one place.",
+    link: "/profile",
+  },
 ];
 
 const Dashboard = () => {
@@ -85,7 +93,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="m-5 2xl:mx-10 grid grid-cols-1 gap-6 2xl:gap-12 md:grid-cols-3">
+      <div className="m-5 2xl:mx-10 grid grid-cols-1 gap-6 2xl:gap-12 md:grid-cols-3 mb-10">
         {integrationList.map((i, k) => {
           return (
             <Link to={i.link} key={k}>
@@ -113,9 +121,9 @@ const Dashboard = () => {
         })}
       </div>
 
-      <div className="my-8">
+      {/* <div className="my-8">
         <Modal />
-      </div>
+      </div> */}
     </>
   );
 };

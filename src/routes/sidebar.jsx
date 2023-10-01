@@ -110,7 +110,7 @@ const routes = [
     name: "Settings", // name that appear in Sidebar
     submenu: [
       {
-        path: "/app/settings-profile", //url
+        path: "/profile", //url
         icon: <UserIcon className={submenuIconClasses} />, // icon component
         name: "Profile", // name that appear in Sidebar
       },

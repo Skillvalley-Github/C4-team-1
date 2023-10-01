@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import EmployeeData from './EmployeeData.json'
+import EmployeeData from "./EmployeeData.json";
 import InputText from "../../components/Input/InputText";
 import CustomButton from "../../components/Shared/CustomButton";
 
@@ -104,13 +104,13 @@ const EmployeeTable = () => {
               <div className="modal-content px-6 py-4 text-left">
                 <h3 className="text-center text-lg font-bold text-gray-900">Add New Employee Here!</h3>
                 <InputText
-                  type="text"
-                  updateType="first_name"
+                        type="text"
+                        updateType="first_name"
                   containerStyle="mt-4"
                   labelTitle="First Name"
-                />
-
-                <InputText type="text" updateType="last_name" containerStyle="mt-4" labelTitle="Last Name" />
+                      />
+                     
+                    <InputText type="text" updateType="last_name" containerStyle="mt-4" labelTitle="Last Name" />
 
                 <InputText type="email" updateType="email" containerStyle="mt-4" labelTitle="Email Id" />
 
@@ -119,7 +119,7 @@ const EmployeeTable = () => {
                     <button className="btn btn-ghost" onClick={() => closeModal()}>
                       Cancel
                     </button>
-                    <button className="btn btn-primary px-6" onClick={() => saveNewLead()}>
+                    <button className="btn btn-primary px-6" onClick={() => handleSave()}>
                       Save
                     </button>
                   </div>
