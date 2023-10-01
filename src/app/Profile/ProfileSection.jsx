@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Overview from "./ProfileSubPages/Overview"
 import Salary from "./ProfileSubPages/Salary"
-import Payslips from "./ProfileSubPages/Payslips"
+import Payslip from "./ProfileSubPages/Payslips"
 import Forms from "./ProfileSubPages/Forms"
 import ProfileSettings from "./ProfileSubPages/ProfileSettings";
 
@@ -110,8 +110,8 @@ const ProfileSection = () => {
         </div>
 
         <ul
-          className={`active-${activeTab} group flex list-none items-stretch border-b-2 border-solid border-transparent text-base font-semibold max-sm:gap-6 max-sm:overflow-x-auto max-sm:overflow-y-hidden `} role="tablist" data-te-nav-ref>
-          <li role="presentation" className="-mb-[2px]  flex">
+          className={`active-${activeTab} group flex list-none items-stretch border-b-2 border-solid border-transparent text-base font-semibold max-sm:gap-6 max-sm:overflow-x-auto max-sm:overflow-y-hidden`}>
+          <li className="-mb-[2px]  flex">
             <Link
               aria-controls="overview"
               className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-overview]:border-primary group-[.active-overview]:text-primary sm:mr-3 lg:mr-10 max-sm:group-[.active-overview]:bg-slate-100 p-4 max-sm:rounded-lg max-sm:border-0"
@@ -120,7 +120,7 @@ const ProfileSection = () => {
               Overview{" "}
             </Link>
           </li>
-          <li role="presentation" className="-mb-[2px]  flex ">
+          <li className="-mb-[2px]  flex ">
             <Link
               aria-controls="salary"
               className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-salary]:border-primary group-[.active-salary]:text-primary sm:mr-3 lg:mr-10 whitespace-nowrap max-sm:group-[.active-salary]:bg-slate-100 p-4 max-sm:rounded-lg max-sm:border-0"
@@ -129,16 +129,16 @@ const ProfileSection = () => {
               Salary Details{" "}
             </Link>
           </li>
-          <li role="presentation" className="-mb-[2px]  flex">
+          <li className="-mb-[2px]  flex">
             <Link
               aria-controls="payslip"
               className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-payslip]:border-primary group-[.active-payslip]:text-primary sm:mr-3 lg:mr-10 max-sm:group-[.active-payslip]:bg-slate-100 p-4 max-sm:rounded-lg max-sm:border-0"
-              to="" onClick={e => handleActiveTab("payslips")}>
+              to="" onClick={e => handleActiveTab("payslip")}>
               {" "}
               Payslips{" "}
             </Link>
           </li>
-          <li role="presentation" className="-mb-[2px]  flex">
+          <li className="-mb-[2px]  flex">
             <Link
               aria-controls="forms"
               className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-forms]:border-primary group-[.active-forms]:text-primary sm:mr-3 lg:mr-10 max-sm:group-[.active-forms]:bg-slate-100 p-4 max-sm:rounded-lg max-sm:border-0"
@@ -147,7 +147,7 @@ const ProfileSection = () => {
               Forms{" "}
             </Link>
           </li>
-          <li role="presentation" className="group -mb-[2px]  flex">
+          <li className="group -mb-[2px]  flex">
             <Link
               aria-controls="settings"
               className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-settings]:border-primary group-[.active-settings]:text-primary sm:mr-3 lg:mr-10 max-sm:group-[.active-settings]:bg-slate-100 p-4 max-sm:rounded-lg max-sm:border-0"
@@ -159,7 +159,7 @@ const ProfileSection = () => {
         </ul>
         <hr className="h-px w-full border-neutral-200" />
 
-      <div>{activeTab === "overview" && <Overview/>} {activeTab === "salary" && <Salary/>} {activeTab === "payslips" && <Payslips/>} {activeTab === "forms" && <Forms/>} {activeTab === "settings" && <ProfileSettings/>}</div>
+      <div>{activeTab === "overview" && <Overview/>} {activeTab === "salary" && <Salary/>} {activeTab === "payslips" && <Payslip/>} {activeTab === "forms" && <Forms/>} {activeTab === "settings" && <ProfileSettings/>}</div>
       </div>
     </div>
   );
