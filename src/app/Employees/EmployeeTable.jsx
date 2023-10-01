@@ -21,15 +21,19 @@ const EmployeeTable = () => {
   const closeModal = () => {
     setIsOpen(false);
   };
-
+  
   const openModal = () => {
     setIsOpen(true);
   };
-
+  
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains("modal-overlay")) {
       closeModal();
     }
+  };
+  
+  const handleSave = () => {
+    closeModal();
   };
 
   return (
@@ -100,9 +104,9 @@ const EmployeeTable = () => {
           <div
             className="modal-overlay fixed left-20 max-sm:left-0 top-0 flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-50"
             onClick={handleOverlayClick}>
-            <div className="modal-container z-50 mx-auto w-11/12 overflow-y-auto rounded bg-white shadow-lg md:max-w-md">
+            <div className="modal-container z-50 mx-auto w-11/12 overflow-y-auto rounded bg-base-200 shadow-lg md:max-w-md border border-slate-500">
               <div className="modal-content px-6 py-4 text-left">
-                <h3 className="text-center text-lg font-bold text-gray-900">Add New Employee Here!</h3>
+                <h3 className="text-center text-lg font-bold ">Add New Employee Here!</h3>
                 <InputText
                         type="text"
                         updateType="first_name"

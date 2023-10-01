@@ -28,7 +28,7 @@ const Navbar = () => {
     else if(currentRoute==="/attendance") setPageTitle("Attendance")
     else if(currentRoute==="/leaveTracker") setPageTitle("Leave Tracker")
     else if(currentRoute==="/tasks") setPageTitle("Tasks")
-    else if(currentRoute==="/app/settings-profile") setPageTitle("Profile Setting")
+    else if(currentRoute==="/profile") setPageTitle("Profile")
     else if(currentRoute==="/payroll/taxdeductions/regime-selection") setPageTitle("Regime Selection")
     else if(currentRoute==="/payroll/taxdeductions/home-rent") setPageTitle("Home Rent")
     else if(currentRoute==="/payroll/taxdeductions/section-80-deductions") setPageTitle("Section-80 Deductions")
@@ -137,7 +137,7 @@ const Navbar = () => {
             >
               <li className="justify-between">
                 <Link to={"/app/settings-profile"}>
-                  Profile Settings
+                  Profile
                   <span className="badge">New</span>
                 </Link>
               </li>
