@@ -57,8 +57,10 @@ const Task = () => {
     setOpen(false);
   };
 
-  const handleDelete=()=>{
-    
+  const handleDelete=(index)=>{
+    const newData = [...data];
+    newData.splice(index, 1);
+    setData(newData);
   }
   const handleDateFromChange = (newValue) => {
     // Update both value and fromDate states
@@ -177,7 +179,7 @@ const Task = () => {
                           <td>{item.assignedBy}</td>
                           <td>{item.status}</td>
                           <td>{item.importanceLevel}</td>
-                          <td className="hover-pointer">❌</td>
+                          <td className="hover-pointer" onClick={()=>handleDelete(index)}>❌</td>
                         </tr>
                       ))}
                     </tbody>
