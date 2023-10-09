@@ -19,7 +19,7 @@ import KeyIcon from "@heroicons/react/24/outline/KeyIcon";
 import DocumentDuplicateIcon from "@heroicons/react/24/outline/DocumentDuplicateIcon";
 import ReceiptPercentIcon from "@heroicons/react/24/outline/ReceiptPercentIcon";
 import ReceiptRefundIcon from "@heroicons/react/24/outline/ReceiptRefundIcon";
-import AdjustmentsVerticalIcon from "@heroicons/react/24/outline/AdjustmentsVerticalIcon";
+import DocumentCheckIcon from "@heroicons/react/24/outline/DocumentCheckIcon";
 
 const iconClasses = `h-6 w-6`;
 const submenuIconClasses = `h-5 w-5`;
@@ -51,9 +51,9 @@ const routes = [
         name: "Reimbursements",
       },
       {
-        path: "/payroll/settings",
-        icon: <AdjustmentsVerticalIcon className={`${submenuIconClasses} `} />,
-        name: "Payroll Settings",
+        path: "/payroll/payslipgenertor",
+        icon: <DocumentCheckIcon className={`${submenuIconClasses} `} />,
+        name: "Payroll Slip Generator",
       },
     ],
   },
