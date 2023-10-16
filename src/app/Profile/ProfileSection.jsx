@@ -13,7 +13,7 @@ const ProfileSection = () => {
   }
 
   return (
-    <div className="draggable relative m-4 mb-6 flex h-fit min-w-0 flex-col break-words rounded-2xl border bg-base-100 bg-clip-border">
+    <div className="relative m-4 mb-6 flex h-fit min-w-0 flex-col break-words rounded-2xl border bg-base-100 bg-clip-border">
       <div className="min-h-[70px] flex-auto bg-transparent px-9 pb-0 pt-9">
         <div className="mb-6 flex flex-wrap xl:flex-nowrap">
           <div className="mb-5 mr-5">
@@ -46,19 +46,8 @@ const ProfileSection = () => {
                 <div className="mb-4 flex flex-wrap pr-2 font-medium">
                   <Link className="text-secondary-dark mb-2 mr-5 flex items-center hover:text-primary" to="">
                     <span className="mr-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="h-5 w-5">
-                        <path
-                          fillRule="evenodd"
-                          d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                    EXCETA3647ETS
                     </span>{" "}
-                    New Delhi, IN{" "}
                   </Link>
                   <Link className="text-secondary-dark mb-2 mr-5 flex items-center hover:text-primary" to="">
                     <span className="mr-1">
@@ -71,7 +60,7 @@ const ProfileSection = () => {
                         <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                       </svg>
                     </span>{" "}
-                    skillvalley@example.com{" "}
+                    skillvalley@gmail.com{" "}
                   </Link>
                 </div>
               </div>
@@ -96,7 +85,7 @@ const ProfileSection = () => {
                   to=""
                   className="text-secondary-inverse mb-2 mr-3 inline-flex items-center justify-center rounded-full bg-neutral-100 px-3 py-1 text-sm font-medium leading-normal transition-all duration-200 ease-in-out hover:bg-neutral-200 text-black">
                   {" "}
-                  Manager{" "}
+                  Software Engineer{" "}
                 </Link>
                 <Link
                   to=""
@@ -110,11 +99,11 @@ const ProfileSection = () => {
         </div>
 
         <ul
-          className={`active-${activeTab} group flex list-none items-stretch border-b-2 border-solid border-transparent text-base font-semibold max-sm:gap-6 max-sm:overflow-x-auto max-sm:overflow-y-hidden`}>
+          className={`active-${activeTab} group flex list-none items-stretch border-b-2 border-solid border-transparent text-base font-semibold max-sm:gap-6 max-sm:overflow-x-auto max-sm:overflow-y-hidden no-scrollbar`}>
           <li className="-mb-[2px]  flex">
             <Link
               aria-controls="overview"
-              className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-overview]:border-primary group-[.active-overview]:text-primary sm:mr-3 lg:mr-10 max-sm:group-[.active-overview]:bg-slate-100 p-4 max-sm:rounded-lg max-sm:border-0"
+              className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-overview]:border-primary group-[.active-overview]:text-primary sm:mr-3 lg:mr-10 p-4"
               to="" onClick={e => {handleActiveTab("overview"); }}>
               {" "}
               Overview{" "}
@@ -123,7 +112,7 @@ const ProfileSection = () => {
           <li className="-mb-[2px]  flex ">
             <Link
               aria-controls="salary"
-              className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-salary]:border-primary group-[.active-salary]:text-primary sm:mr-3 lg:mr-10 whitespace-nowrap max-sm:group-[.active-salary]:bg-slate-100 p-4 max-sm:rounded-lg max-sm:border-0"
+              className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-salary]:border-primary group-[.active-salary]:text-primary sm:mr-3 lg:mr-10 whitespace-nowrap p-4"
               to="" onClick={e => handleActiveTab("salary")}>
               {" "}
               Salary Details{" "}
@@ -132,7 +121,7 @@ const ProfileSection = () => {
           <li className="-mb-[2px]  flex">
             <Link
               aria-controls="payslip"
-              className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-payslip]:border-primary group-[.active-payslip]:text-primary sm:mr-3 lg:mr-10 max-sm:group-[.active-payslip]:bg-slate-100 p-4 max-sm:rounded-lg max-sm:border-0"
+              className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-payslip]:border-primary group-[.active-payslip]:text-primary sm:mr-3 lg:mr-10 p-4"
               to="" onClick={e => handleActiveTab("payslip")}>
               {" "}
               Payslips{" "}
@@ -141,7 +130,7 @@ const ProfileSection = () => {
           <li className="-mb-[2px]  flex">
             <Link
               aria-controls="forms"
-              className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-forms]:border-primary group-[.active-forms]:text-primary sm:mr-3 lg:mr-10 max-sm:group-[.active-forms]:bg-slate-100 p-4 max-sm:rounded-lg max-sm:border-0"
+              className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-forms]:border-primary group-[.active-forms]:text-primary sm:mr-3 lg:mr-10 p-4"
               to="" onClick={e => handleActiveTab("forms")}>
               {" "}
               Forms{" "}
@@ -150,7 +139,7 @@ const ProfileSection = () => {
           <li className="group -mb-[2px]  flex">
             <Link
               aria-controls="settings"
-              className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-settings]:border-primary group-[.active-settings]:text-primary sm:mr-3 lg:mr-10 max-sm:group-[.active-settings]:bg-slate-100 p-4 max-sm:rounded-lg max-sm:border-0"
+              className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-settings]:border-primary group-[.active-settings]:text-primary sm:mr-3 lg:mr-10 p-4"
               to="" onClick={e => handleActiveTab("settings")}>
               {" "}
               Settings{" "}

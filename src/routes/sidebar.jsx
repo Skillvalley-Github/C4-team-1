@@ -36,37 +36,28 @@ const routes = [
     name: "Team", // name that appear in Sidebar
   },
   {
-    path: "", // url
+    path: "/payroll/payslipgenertor", // url
     icon: <CurrencyRupeeIcon className={`${iconClasses} inline`} />, // icon component
     name: "Payroll", // name that appear in Sidebar
-    submenu: [
-      {
-        path: "/payroll/taxdeductions",
-        icon: <ReceiptPercentIcon className={`${submenuIconClasses} `} />,
-        name: "Tax Deductions",
-      },
-      {
-        path: "/payroll/reimbursements",
-        icon: <ReceiptRefundIcon className={`${submenuIconClasses} `} />,
-        name: "Reimbursements",
-      },
-      {
-        path: "/payroll/payslipgenertor",
-        icon: <DocumentCheckIcon className={`${submenuIconClasses} `} />,
-        name: "Payroll Slip Generator",
-      },
-    ],
+    // submenu: [
+      
+    //   {
+    //     path: "/payroll/payslipgenertor",
+    //     icon: <DocumentCheckIcon className={`${submenuIconClasses} `} />,
+    //     name: "Payroll Slip Generator",
+    //   },
+    // ],
   },
   {
     path: "/attendance", // url
     icon: <CalendarDaysIcon className={iconClasses} />, // icon component
     name: "Attendance", // name that appear in Sidebar
   },
-  {
-    path: "/leaveTracker", // url
-    icon: <ChartBarIcon className={iconClasses} />, // icon component
-    name: "Leave Tracker", // name that appear in Sidebar
-  },
+  // {
+  //   path: "/leaveTracker", // url
+  //   icon: <ChartBarIcon className={iconClasses} />, // icon component
+  //   name: "Leave Tracker", // name that appear in Sidebar
+  // },
   {
     path: "/tasks", // url
     icon: <InboxArrowDownIcon className={iconClasses} />, // icon component
@@ -74,9 +65,14 @@ const routes = [
   },
   {
     path: "", //no url needed as this has submenu
-    icon: <DocumentDuplicateIcon className={`${iconClasses} inline`} />, // icon component
-    name: "Pages", // name that appear in Sidebar
+    icon: <Cog6ToothIcon className={`${iconClasses} inline`} />, // icon component
+    name: "Settings", // name that appear in Sidebar
     submenu: [
+      {
+        path: "/profile", //url
+        icon: <UserIcon className={submenuIconClasses} />, // icon component
+        name: "Profile", // name that appear in Sidebar
+      },
       {
         path: "/login",
         icon: <ArrowRightOnRectangleIcon className={submenuIconClasses} />,
@@ -102,49 +98,15 @@ const routes = [
         icon: <ExclamationTriangleIcon className={submenuIconClasses} />,
         name: "404",
       },
-    ],
-  },
-  {
-    path: "", //no url needed as this has submenu
-    icon: <Cog6ToothIcon className={`${iconClasses} inline`} />, // icon component
-    name: "Settings", // name that appear in Sidebar
-    submenu: [
       {
-        path: "/profile", //url
-        icon: <UserIcon className={submenuIconClasses} />, // icon component
-        name: "Profile", // name that appear in Sidebar
+        path: "/payroll/taxdeductions",
+        icon: <ReceiptPercentIcon className={`${submenuIconClasses} `} />,
+        name: "Tax Deductions",
       },
       {
-        path: "/app/settings-billing",
-        icon: <WalletIcon className={submenuIconClasses} />,
-        name: "Billing",
-      },
-      {
-        path: "/app/settings-team", // url
-        icon: <UsersIcon className={submenuIconClasses} />, // icon component
-        name: "Team Members", // name that appear in Sidebar
-      },
-    ],
-  },
-  {
-    path: "", //no url needed as this has submenu
-    icon: <DocumentTextIcon className={`${iconClasses} inline`} />, // icon component
-    name: "Documentation", // name that appear in Sidebar
-    submenu: [
-      {
-        path: "/app/getting-started", // url
-        icon: <DocumentTextIcon className={submenuIconClasses} />, // icon component
-        name: "Getting Started", // name that appear in Sidebar
-      },
-      {
-        path: "/app/features",
-        icon: <TableCellsIcon className={submenuIconClasses} />,
-        name: "Features",
-      },
-      {
-        path: "/app/components",
-        icon: <CodeBracketSquareIcon className={submenuIconClasses} />,
-        name: "Components",
+        path: "/payroll/reimbursements",
+        icon: <ReceiptRefundIcon className={`${submenuIconClasses} `} />,
+        name: "Reimbursements",
       },
     ],
   },
