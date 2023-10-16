@@ -138,11 +138,10 @@ const Navbar = () => {
               <li className="justify-between">
                 <Link to={"profile"}>
                   Profile
-                  <span className="badge">New</span>
                 </Link>
               </li>
               <li className="">
-                <Link to={"/app/settings-billing"}>Bill History</Link>
+                <Link to={"/welcome"}>Fusion Sync</Link>
               </li>
               <div className="divider mb-0 mt-0"></div>
               <li>
