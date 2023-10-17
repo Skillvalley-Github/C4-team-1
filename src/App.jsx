@@ -20,6 +20,7 @@ import LeaveTravelAllowance from "./app/Payroll/PayrollSubpages/LeaveTravelAllow
 import PanDetails from "./app/Payroll/PayrollSubpages/PanDetails";
 import ProfileSection from "./app/Profile/ProfileSection";
 import InternalPage from "./app/Protected/404";
+import TaskFaq from "./app/Tasks/TaskFaq";
 
 const App = () => {
   return (
@@ -66,6 +67,7 @@ const App = () => {
           <Route path="/payroll/settings" element={<PayrollSettings />} />
           {/* ---------------tasks------------ */}
           <Route path="/tasks" element={<Tasks />} />
+          <Route path = "/tasks/faq" element={<TaskFaq/>}/>
           {/* -------------tasks ends here------------- */}
           <Route path="/leavetracker" element={<LeaveTracker />} />
           <Route path="/employeedata" element={<EmployeeData />} />
