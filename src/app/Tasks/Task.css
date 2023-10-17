@@ -1,3 +1,12 @@
+.outer-box{
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+}
+.button-box-container{
+    display: flex;
+    justify-content: space-between;
+}
 .time-picker-container{
     position: absolute;
     top: 0;
@@ -5,4 +14,10 @@
 }
 .hover-pointer{
  cursor: pointer;
+}
+
+.taskBtn{
+    height: 5rem;
+    width: 8rem;
+   
 }

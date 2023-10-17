@@ -15,8 +15,11 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { DateField } from "@mui/x-date-pickers/DateField";
+import { useNavigate } from "react-router-dom";
 
 const Task = () => {
+  const navigate = useNavigate();
+
   const [open, setOpen] = useState(false);
   const [taskName, setTaskName] = useState("");
   const [fromDate, setFromDate] = useState(new Date()); // Initialize fromDate with the current date
@@ -54,14 +57,20 @@ const Task = () => {
     };
     let arr = [...data, obj];
     setData(arr);
+    setTaskName("");
+    setFromDate(new Date());
+    setToDate(new Date());
+    setAssignedBy("");
+    setStatus("");
+    setImportanceLevel("");
     setOpen(false);
   };
 
-  const handleDelete=(index)=>{
+  const handleDelete = (index) => {
     const newData = [...data];
     newData.splice(index, 1);
     setData(newData);
-  }
+  };
   const handleDateFromChange = (newValue) => {
     // Update both value and fromDate states
     setValue(newValue);
@@ -79,12 +88,22 @@ const Task = () => {
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
   };
+
+  const handleFaq = () => {
+    navigate("/tasks/faq");
+  };
   return (
     <>
-      <div>
-        <Button variant="outlined" onClick={handleClickOpen}>
-          ➕ ADD TASK
-        </Button>
+      <div className="outer-box">
+        <div className="button-box-container">
+          <Button variant="outlined" onClick={handleClickOpen} className="taskBtn">
+            ➕ ADD TASK
+          </Button>
+          <Button variant="outlined" onClick={handleFaq} className="taskBtn" style={{marginRight:"1rem"}}>
+            FAQ?
+          </Button>
+        </div>
+        <h1 className="text-4xl font-medium italic text-black">Total tasks : {data.length}</h1>
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle>Tasks</DialogTitle>
           <DialogContent>
@@ -156,36 +175,37 @@ const Task = () => {
         <div className="flex flex-col overflow-x-auto p-6  max-sm:p-0 max-sm:pt-3">
           <div className="card card-body min-w-full bg-base-100 shadow-xl ">
             <div className="overflow-x-auto">
-                <div className="overflow-x-auto">
-                  <table className="table">
-                    {/* head */}
-                    <thead>
-                      <tr className="hover">
-                        <th>Task Name</th>
-                        <th>From Date</th>
-                        <th>To Date</th>
-                        <th>Assigned By</th>
-                        <th>Status</th>
-                        <th>Importance Level</th>
-                        <td></td>
+              <div className="overflow-x-auto">
+                <table className="table">
+                  {/* head */}
+                  <thead>
+                    <tr className="hover">
+                      <th>Task Name</th>
+                      <th>From Date</th>
+                      <th>To Date</th>
+                      <th>Assigned By</th>
+                      <th>Status</th>
+                      <th>Importance Level</th>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.map((item, index) => (
+                      <tr key={index} className="hover">
+                        <td>{item.taskName}</td>
+                        <td>{item.fromDate}</td>
+                        <td>{item.toDate}</td>
+                        <td>{item.assignedBy}</td>
+                        <td>{item.status}</td>
+                        <td>{item.importanceLevel}</td>
+                        <td className="hover-pointer" onClick={() => handleDelete(index)}>
+                          ❌
+                        </td>
                       </tr>
-                    </thead>
-                    <tbody>
-                      {data.map((item, index) => (
-                        <tr key={index} className="hover">
-                          <td>{item.taskName}</td>
-                          <td>{item.fromDate}</td>
-                          <td>{item.toDate}</td>
-                          <td>{item.assignedBy}</td>
-                          <td>{item.status}</td>
-                          <td>{item.importanceLevel}</td>
-                          <td className="hover-pointer" onClick={()=>handleDelete(index)}>❌</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
