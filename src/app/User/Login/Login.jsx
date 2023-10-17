@@ -1,8 +1,5 @@
 import { useState, useRef } from "react";
-import { Link } from "react-router-dom";
-import LandingIntro from "../../../components/Shared/LandingIntro";
-// import ErrorText from  '../../components/Typography/ErrorText'
-import InputText from "../../../components/Input/InputText";
+import logo from "../../../assets/images/logo-red.svg";
 
 function Login() {
   const INITIAL_LOGIN_OBJ = {
@@ -18,10 +15,8 @@ function Login() {
     e.preventDefault();
     setErrorMessage("");
 
-    if (loginObj.emailId.trim() === "")
-      return setErrorMessage("Email Id is required! (use any value)");
-    if (loginObj.password.trim() === "")
-      return setErrorMessage("Password is required! (use any value)");
+    if (loginObj.emailId.trim() === "") return setErrorMessage("Email Id is required! (use any value)");
+    if (loginObj.password.trim() === "") return setErrorMessage("Password is required! (use any value)");
     else {
       setLoading(true);
       // Call API to check user credentials and save token in localstorage
@@ -37,63 +32,60 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-base-200 flex items-center">
-      <div className="card mx-auto w-full max-w-5xl  shadow-xl border-2 border-gray-950">
-        <div className="grid  md:grid-cols-2 grid-cols-1  bg-base-100 rounded-xl">
-          <div className="">
-            <LandingIntro />
-          </div>
-          <div className="py-24 px-10">
-            <h2 className="text-2xl font-semibold mb-2 text-center">Login</h2>
-            <form onSubmit={(e) => submitForm(e)}>
-              <div className="mb-4">
-                <InputText
-                  type="emailId"
-                  defaultValue={loginObj.emailId}
-                  updateType="emailId"
-                  containerStyle="mt-4"
-                  labelTitle="Email Id"
-                  updateFormValue={updateFormValue}
+    <div className="flex min-h-screen items-center bg-base-200">
+      <div className="flex w-full flex-wrap">
+        <div className="flex w-full flex-col md:w-1/2">
+          <div className="my-auto flex flex-col justify-center px-8 pt-8 md:justify-start md:px-24 md:pt-0 lg:px-32">
+            <a href="#" className="mx-auto justify-center">
+              <img src={logo} alt="" />
+            </a>
+            <form className="flex flex-col pt-3 md:pt-8 pb-12" onsubmit="event.preventDefault();">
+              <div className="flex flex-col pt-4">
+                <label for="email" className="text-lg">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="your@email.com"
+                  className="focus:shadow-outline mt-1 w-full appearance-none rounded border px-3 py-2 leading-tight shadow focus:outline-none"
                 />
+              </div>
 
-                <InputText
-                  defaultValue={loginObj.password}
+              <div className="flex flex-col pt-4">
+                <label for="password" className="text-lg">
+                  Password
+                </label>
+                <input
                   type="password"
-                  updateType="password"
-                  containerStyle="mt-4"
-                  labelTitle="Password"
-                  updateFormValue={updateFormValue}
+                  id="password"
+                  placeholder="Password"
+                  className="focus:shadow-outline mt-1 w-full appearance-none rounded border px-3 py-2 leading-tight shadow focus:outline-none"
                 />
               </div>
 
-              <div className="text-right text-primary">
-                <Link to="/forgot-password">
-                  <span className="text-sm  inline-block  hover:text-primary hover:underline hover:cursor-pointer transition duration-200">
-                    Forgot Password?
-                  </span>
-                </Link>
-              </div>
-
-              {/* <ErrorText styleClass="mt-8">{errorMessage}</ErrorText> */}
-              <button
+              <input
                 type="submit"
-                className={
-                  "btn mt-2 w-full btn-primary" + (loading ? " loading" : "")
-                }
-              >
-                Login
-              </button>
-
-              <div className="text-center mt-4">
-                Don't have an account yet?{" "}
-                <Link to="/register">
-                  <span className="  inline-block  hover:text-primary hover:underline hover:cursor-pointer transition duration-200">
-                    Register
-                  </span>
-                </Link>
-              </div>
+                value="Log In"
+                className="mt-8 bg-black p-2 text-lg font-bold text-white hover:bg-gray-700"
+              />
             </form>
+            {/* <div className="pb-12 pt-12 text-center">
+              <p>
+                Don't have an account?{" "}
+                <a href="register.html" className="font-semibold underline">
+                  Register here.
+                </a>
+              </p>
+            </div> */}
           </div>
+        </div>
+
+        <div className="w-1/2 shadow-2xl">
+          <img
+            className="hidden h-screen w-full object-cover md:block"
+            src="https://source.unsplash.com/random/?office,employees"
+          />
         </div>
       </div>
     </div>

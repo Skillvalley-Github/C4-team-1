@@ -30,11 +30,11 @@ const INITIAL_INTEGRATION_LIST = [
     link: "/attendance",
   },
   {
-    name: "Leave Tracker",
-    icon: leave,
+    name: "Tasks",
+    icon: task,
     description:
-      "Simplify leave management with our intuitive leave tracker section. Easily request, approve, and monitor employee absences for seamless HR administration.",
-    link: "/leaveTracker",
+      "Stay organized and efficient with our tasks section. Assign, track, and manage work seamlessly, ensuring productivity and collaboration.",
+    link: "/tasks",
   },
   {
     name: "Tax Deductions",
@@ -54,15 +54,15 @@ const INITIAL_INTEGRATION_LIST = [
     name: "Payroll Settings",
     icon: payrollSettings,
     description:
-      "Customize payroll effortlessly in our settings section. Tailor payment schedules, tax withholdings, and employee details for precise financial management.",
+    "Customize payroll effortlessly in our settings section. Tailor payment schedules, tax withholdings, and employee details for precise financial management.",
     link: "/payroll/settings",
   },
   {
-    name: "Tasks",
-    icon: task,
+    name: "Leave Tracker",
+    icon: leave,
     description:
-      "Stay organized and efficient with our tasks section. Assign, track, and manage work seamlessly, ensuring productivity and collaboration.",
-    link: "/tasks",
+      "Simplify leave management with our intuitive leave tracker section. Easily request, approve, and monitor employee absences for seamless HR administration.",
+    link: "/leaveTracker",
   },
   {
     name: "Profile",

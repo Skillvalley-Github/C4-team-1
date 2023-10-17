@@ -18,10 +18,10 @@ const Reimbursements = () => {
         <h1>Claim a Reimbursement</h1>
       </div>
 
-      <div className="px-6 py-8 jus">
+      <div className="px-6 py-8 ">
         <div className=" card bg-base-100  p-4 shadow-xl">
           <div className="card-body p-4">
-            <form action="">
+            <form action="#" method="POST">
               <div className="mb-4">
                 <label htmlFor="reimbursementType">Type of Reimbursement?*</label>
                 <select
@@ -53,9 +53,10 @@ const Reimbursements = () => {
 
               <div className="mb-4">
                 <label htmlFor="expenseDetails">Any detail?</label>
-                <input
+                <textarea
                   type="text"
                   id="expenseDetails"
+                  rows={3}
                   className="mt-2 block w-10/12 rounded-md  border border-gray-200 bg-transparent px-2 py-2 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-gray-500 dark:focus:border-blue-500"
                   placeholder="Expense Details"
                   required
