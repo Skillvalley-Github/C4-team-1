@@ -1,5 +1,6 @@
 import { useState } from "react";
 import * as React from "react";
+import avatar from '../../assets/images/avatar1.jpg'
 
 import FullCalendarComponent from "./FullCalendarComponent";
 
@@ -14,12 +15,12 @@ const Attendance = () => {
         <div className="card-body">
           <div className="avatar">
             <div className="w-24 rounded-full">
-              <img src="/images/profile-photo.png" alt="profile_image" />
+              <img src={avatar} alt="profile_image" />
             </div>
           </div>
           <h2 className="card-title">Welcome Again, Mark!</h2>
           <p>Mark Your today attendance</p>
-          <d className="card-actions justify-end">
+          <div className="card-actions justify-end">
             {attendance ? (
               <div className="flex gap-2 rounded-md bg-green-700 p-3 text-white">
                 <svg
@@ -41,7 +42,7 @@ const Attendance = () => {
                 Mark Attendance
               </button>
             )}
-          </d>
+          </div>
         </div>
       </div>
       {/* Performance */}
@@ -51,7 +52,7 @@ const Attendance = () => {
           <div className="stat-figure text-primary">
             <div className="avatar online">
               <div className="w-16 rounded-full">
-                <img src="images/profile-photo.png" />
+                <img src={avatar} />
               </div>
             </div>
           </div>

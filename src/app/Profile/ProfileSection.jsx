@@ -5,6 +5,7 @@ import Salary from "./ProfileSubPages/Salary"
 import Payslip from "./ProfileSubPages/Payslips"
 import Forms from "./ProfileSubPages/Forms"
 import ProfileSettings from "./ProfileSubPages/ProfileSettings";
+import Avatar from "../../assets/images/avatar1.jpg"
 
 const ProfileSection = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -20,7 +21,7 @@ const ProfileSection = () => {
             <div className="relative inline-block shrink-0 rounded-2xl">
               <img
                 className="inline-block h-[80px] w-[80px] shrink-0 rounded-2xl lg:h-[160px] lg:w-[160px]"
-                src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/avatars/avatar1.jpg"
+                src={Avatar}
                 alt="image"
               />
               <div className="group/tooltip relative">
@@ -113,7 +114,7 @@ const ProfileSection = () => {
             <Link
               aria-controls="salary"
               className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-salary]:border-primary group-[.active-salary]:text-primary sm:mr-3 lg:mr-10 whitespace-nowrap p-4"
-              to="" onClick={e => handleActiveTab("salary")}>
+              to="/dashboard/profile/salarydetails" onClick={e => handleActiveTab("salary")}>
               {" "}
               Salary Details{" "}
             </Link>
@@ -122,7 +123,7 @@ const ProfileSection = () => {
             <Link
               aria-controls="payslip"
               className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-payslip]:border-primary group-[.active-payslip]:text-primary sm:mr-3 lg:mr-10 p-4"
-              to="" onClick={e => handleActiveTab("payslip")}>
+              to="/dashboard/profile/payslips" onClick={e => handleActiveTab("payslip")}>
               {" "}
               Payslips{" "}
             </Link>
@@ -131,7 +132,7 @@ const ProfileSection = () => {
             <Link
               aria-controls="forms"
               className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-forms]:border-primary group-[.active-forms]:text-primary sm:mr-3 lg:mr-10 p-4"
-              to="" onClick={e => handleActiveTab("forms")}>
+              to="/dashboard/profile/forms" onClick={e => handleActiveTab("forms")}>
               {" "}
               Forms{" "}
             </Link>
@@ -140,7 +141,7 @@ const ProfileSection = () => {
             <Link
               aria-controls="settings"
               className="text-muted mr-1 border-b-2 border-transparent pb-3 pt-2 transition-colors duration-200 ease-in-out hover:text-primary hover:border-primary group-[.active-settings]:border-primary group-[.active-settings]:text-primary sm:mr-3 lg:mr-10 p-4"
-              to="" onClick={e => handleActiveTab("settings")}>
+              to="/dashboard/profile/settings" onClick={e => handleActiveTab("settings")}>
               {" "}
               Settings{" "}
             </Link>

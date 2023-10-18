@@ -28,13 +28,13 @@ const Sidebar = () => {
           </button>
 
           <li className="mb-2 text-xl font-semibold ">
-            <Link to={"/welcome"}>
+            <Link to={"/"}>
               <img className="w-40" src={logo} alt="FusionSync Logo" />
             </Link>{" "}
           </li>
           {routes.map((route, k) => {
             return (
-              <li className="w-full flex justify-items-end my-0.5" key={k}>
+              <li className="w-full flex justify-items-end my-1.5" key={k}>
                 {route.submenu ? (
                   <SidebarSubmenu {...route} />
                 ) : (

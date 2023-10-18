@@ -47,7 +47,7 @@ const Overview = () => {
             </div>
             <div className="grid grid-cols-2">
               <div className="px-4 py-3 font-semibold">Employee Id</div>
-              <div className="px-4 py-3">ABCDEF1234</div>
+              <div className="px-4 py-3">EXCETA3647ETS</div>
             </div>
             <div className="grid grid-cols-2">
               <div className="px-4 py-3 font-semibold">Contact No.</div>
@@ -59,7 +59,7 @@ const Overview = () => {
             </div>
             <div className="grid grid-cols-2">
               <div className="px-4 py-3 font-semibold">PAN</div>
-              <div className="px-4 py-3">EXCETA3647ETS</div>
+              <div className="px-4 py-3">ABCDEF1234</div>
             </div>
             <div className="grid grid-cols-2">
               <div className="px-4 py-3 font-semibold">Gender</div>
@@ -73,7 +73,7 @@ const Overview = () => {
               <div className="px-4 py-3 font-semibold">Email</div>
               <div className="px-4 py-3">
                 <a className="text-blue-800 text-sm" href="mailto:jane@example.com">
-                skillvalley@gamil.com
+                skillvalley@gmail.com
                 </a>
               </div>
             </div>

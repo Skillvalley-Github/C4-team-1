@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import EmployeeData from "./EmployeeData.json";
 import InputText from "../../components/Input/InputText";
-import CustomButton from "../../components/Shared/CustomButton";
-
 
 const EmployeeTable = () => {
   const [members, setMembers] = useState(EmployeeData);
 
   const getRoleComponent = (role) => {
     if (role === "Admin") return <div className="badge badge-secondary">{role}</div>;
-    if (role === "Manager") return <div className="badge">{role}</div>;
+    if (role === "Manager") return <div className="badge badge-info">{role}</div>;
     if (role === "Owner") return <div className="badge badge-primary">{role}</div>;
     if (role === "Support") return <div className="badge badge-accent">{role}</div>;
     else return <div className="badge badge-ghost">{role}</div>;
@@ -21,17 +19,17 @@ const EmployeeTable = () => {
   const closeModal = () => {
     setIsOpen(false);
   };
-  
+
   const openModal = () => {
     setIsOpen(true);
   };
-  
+
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains("modal-overlay")) {
       closeModal();
     }
   };
-  
+
   const handleSave = () => {
     closeModal();
   };
@@ -94,6 +92,13 @@ const EmployeeTable = () => {
                     <td>{l.dob}</td>
                     <td>{l.doj}</td>
                     <td>{l.father_name}</td>
+                    <td>
+                      <button
+                        type="button"
+                        class="focus:shadow-outline rounded bg-red-500 px-2 py-1 text-sm text-white hover:bg-red-700 focus:outline-none">
+                        Delete
+                      </button>
+                    </td>
                   </tr>
                 );
               })}
@@ -102,19 +107,19 @@ const EmployeeTable = () => {
         </div>
         {isOpen && (
           <div
-            className="modal-overlay fixed left-20 max-sm:left-0 top-0 flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-50"
+            className="modal-overlay fixed left-20 top-0 flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-50 max-sm:left-0"
             onClick={handleOverlayClick}>
-            <div className="modal-container z-50 mx-auto w-11/12 overflow-y-auto rounded bg-base-200 shadow-lg md:max-w-md border border-slate-500">
+            <div className="modal-container z-50 mx-auto w-11/12 overflow-y-auto rounded border border-slate-500 bg-base-200 shadow-lg md:max-w-md">
               <div className="modal-content px-6 py-4 text-left">
                 <h3 className="text-center text-lg font-bold ">Add New Employee Here!</h3>
                 <InputText
-                        type="text"
-                        updateType="first_name"
+                  type="text"
+                  updateType="first_name"
                   containerStyle="mt-4"
                   labelTitle="First Name"
-                      />
-                     
-                    <InputText type="text" updateType="last_name" containerStyle="mt-4" labelTitle="Last Name" />
+                />
+
+                <InputText type="text" updateType="last_name" containerStyle="mt-4" labelTitle="Last Name" />
 
                 <InputText type="email" updateType="email" containerStyle="mt-4" labelTitle="Email Id" />
 
