@@ -90,7 +90,7 @@ const Task = () => {
   };
 
   const handleFaq = () => {
-    navigate("/tasks/faq");
+    navigate("/dashboard/tasks/faq");
   };
   return (
     <>

@@ -26,17 +26,17 @@ const submenuIconClasses = `h-5 w-5`;
 
 const routes = [
   {
-    path: "/",
+    path: "/dashboard",
     icon: <Squares2X2Icon className={iconClasses} />,
     name: "Dashboard",
   },
   {
-    path: "/employeedata", // url
+    path: "/dashboard/employeedata", // url
     icon: <UsersIcon className={iconClasses} />, // icon component
     name: "Team", // name that appear in Sidebar
   },
   {
-    path: "/payroll/payslipgenertor", // url
+    path: "/dashboard/payroll/payslip", // url
     icon: <CurrencyRupeeIcon className={`${iconClasses} inline`} />, // icon component
     name: "Payroll", // name that appear in Sidebar
     // submenu: [
@@ -49,7 +49,7 @@ const routes = [
     // ],
   },
   {
-    path: "/attendance", // url
+    path: "/dashboard/attendance", // url
     icon: <CalendarDaysIcon className={iconClasses} />, // icon component
     name: "Attendance", // name that appear in Sidebar
   },
@@ -59,7 +59,7 @@ const routes = [
   //   name: "Leave Tracker", // name that appear in Sidebar
   // },
   {
-    path: "/tasks", // url
+    path: "/dashboard/tasks", // url
     icon: <InboxArrowDownIcon className={iconClasses} />, // icon component
     name: "Tasks", // name that appear in Sidebar
   },
@@ -69,7 +69,7 @@ const routes = [
     name: "Settings", // name that appear in Sidebar
     submenu: [
       {
-        path: "/profile", //url
+        path: "/dashboard/profile", //url
         icon: <UserIcon className={submenuIconClasses} />, // icon component
         name: "Profile", // name that appear in Sidebar
       },
@@ -89,25 +89,20 @@ const routes = [
         name: "Forgot Password",
       },
       {
-        path: "/app/blank",
-        icon: <DocumentIcon className={submenuIconClasses} />,
-        name: "Blank Page",
-      },
-      {
         path: "/app/404",
         icon: <ExclamationTriangleIcon className={submenuIconClasses} />,
         name: "404",
       },
-      {
-        path: "/payroll/taxdeductions",
-        icon: <ReceiptPercentIcon className={`${submenuIconClasses} `} />,
-        name: "Tax Deductions",
-      },
-      {
-        path: "/payroll/reimbursements",
-        icon: <ReceiptRefundIcon className={`${submenuIconClasses} `} />,
-        name: "Reimbursements",
-      },
+      // {
+      //   path: "/dashboard/payroll/taxdeductions",
+      //   icon: <ReceiptPercentIcon className={`${submenuIconClasses} `} />,
+      //   name: "Tax Deductions",
+      // },
+      // {
+      //   path: "/dashboard/payroll/reimbursements",
+      //   icon: <ReceiptRefundIcon className={`${submenuIconClasses} `} />,
+      //   name: "Reimbursements",
+      // },
     ],
   },
 ];

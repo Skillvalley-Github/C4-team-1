@@ -27,11 +27,11 @@ const PaySlipGenerator = () => {
     <>
       <div className="flex flex-col overflow-x-auto p-6 max-sm:p-0 max-sm:pt-3">
         <div className="card card-body min-w-full bg-base-100 shadow-xl">
-          <div className="text flex justify-center rounded-lg border border-gray-200 bg-slate-400 p-2 text-2xl font-bold">
+          {/* <div className="text flex justify-center rounded-lg border border-gray-200 bg-slate-400 p-2 text-2xl font-bold">
             <h1>Employee Pay slip Generator</h1>
-          </div>
+          </div> */}
           {/* Employee Information */}
-          <div className="mt-8 flex flex-row gap-x-4">
+          <div className="flex flex-row gap-x-4">
             <div className="flex w-6/12 flex-col">
               <InputField
                 id="EmployeeName"

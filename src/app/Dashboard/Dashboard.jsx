@@ -20,56 +20,56 @@ const INITIAL_INTEGRATION_LIST = [
     icon: employees,
     description:
       "Easily access and view employees of organization in our user-friendly employee list section, ensuring efficient tracking.",
-    link: "/employeedata",
+    link: "/dashboard/employeedata",
   },
   {
     name: "Attendance",
     icon: attendance,
     description:
       "Track attendance effortlessly with our dedicated section. Streamline record-keeping, monitor punctuality, and enhance workforce management for improved productivity.",
-    link: "/attendance",
+    link: "/dashboard/attendance",
   },
   {
     name: "Tasks",
     icon: task,
     description:
       "Stay organized and efficient with our tasks section. Assign, track, and manage work seamlessly, ensuring productivity and collaboration.",
-    link: "/tasks",
+    link: "/dashboard/tasks",
   },
   {
     name: "Tax Deductions",
     icon: tax,
     description:
       "Optimize your finances with our tax deductions section. Easily calculate, manage, and maximize your tax benefits for efficient financial planning.",
-    link: "/payroll/taxdeductions",
+    link: "/dashboard/payroll/taxdeductions",
   },
   {
     name: "Reimbursements",
     icon: reimbursement,
     description:
       "Effortlessly claim tax reimbursements with our user-friendly section. Simplify expense submissions and receive timely refunds, optimizing your financial management.",
-    link: "/payroll/reimbursements",
+    link: "/dashboard/payroll/reimbursements",
   },
   {
-    name: "Payroll Settings",
+    name: "Generate Payslip",
     icon: payrollSettings,
     description:
     "Customize payroll effortlessly in our settings section. Tailor payment schedules, tax withholdings, and employee details for precise financial management.",
-    link: "/payroll/settings",
+    link: "/dashboard/payroll/payslip",
   },
   {
     name: "Leave Tracker",
     icon: leave,
     description:
       "Simplify leave management with our intuitive leave tracker section. Easily request, approve, and monitor employee absences for seamless HR administration.",
-    link: "/leaveTracker",
+    link: "/dashboard/leaveTracker",
   },
   {
     name: "Profile",
     icon: profile,
     description:
       "Easily access and update your details, view salary information, access payslips, submit forms, and configure settings all at one place.",
-    link: "/profile",
+    link: "/dashboard/profile",
   },
 ];
 
