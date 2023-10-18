@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PlusCircleIcon from "@heroicons/react/24/outline/PlusCircleIcon";
+import TrashIcon from "@heroicons/react/24/outline/TrashIcon";
 
 const InputField = ({ id, label, type, placeholder, required, value, onChange, min }) => {
   return (
@@ -10,7 +11,7 @@ const InputField = ({ id, label, type, placeholder, required, value, onChange, m
       <input
         type={type}
         id={id}
-        className="mb-4 mt-2 flex w-full justify-start rounded-md border-b border-gray-200 bg-transparent px-2 py-2 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-gray-500 dark:focus:border-blue-500"
+        className="mb-4 mt-2 flex w-full justify-start rounded-md border border-dashed border-gray-200 bg-transparent px-2 py-2 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-gray-500 dark:focus:border-blue-500"
         placeholder={placeholder}
         required={required}
         value={value}
@@ -95,6 +96,14 @@ const PaySlipGenerator = () => {
 
     // Show the deductions table after adding
     setShowDeductionsTable(true);
+  };
+
+  const deleteRow = (index) => {
+    if (window.confirm("Are you sure you want to delete this row?")) {
+      const updatedTableData = [...tableData];
+      updatedTableData.splice(index, 1);
+      setTableData(updatedTableData);
+    }
   };
 
   return (
@@ -226,7 +235,7 @@ const PaySlipGenerator = () => {
                   value={earningsAmount}
                   onChange={(e) => setEarningsAmount(e.target.value)}
                 />
-                <div>
+                <div className="mt-8">
                   <button className="btn btn-active px-3" onClick={addEarnings}>
                     <PlusCircleIcon className="h-5 w-5" /> Add
                   </button>
@@ -237,11 +246,14 @@ const PaySlipGenerator = () => {
                   <table className="min-w-full border border-dashed border-gray-500">
                     <thead>
                       <tr>
-                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-left text-lg font-medium uppercase leading-4 tracking-wider">
+                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-center text-lg font-medium uppercase leading-4 tracking-wider">
                           Name
                         </th>
-                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-left text-lg font-medium uppercase leading-4 tracking-wider">
+                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-center text-lg font-medium uppercase leading-4 tracking-wider">
                           Amount
+                        </th>
+                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-center text-lg font-medium uppercase leading-4 tracking-wider">
+                          Delete
                         </th>
                       </tr>
                     </thead>
@@ -253,6 +265,11 @@ const PaySlipGenerator = () => {
                           </td>
                           <td className="whitespace-no-wrap border border-dashed border-gray-500 px-6 py-4">
                             ₹ {item.amount}
+                          </td>
+                          <td className="whitespace-no-wrap border border-dashed border-gray-500 px-6 py-4">
+                            <div className="flex justify-center hover:text-red-600">
+                              <TrashIcon className="  h-5 w-5 " />
+                            </div>
                           </td>
                         </tr>
                       ))}
@@ -292,8 +309,8 @@ const PaySlipGenerator = () => {
                   value={deductionsAmount}
                   onChange={(e) => setDeductionsAmount(e.target.value)}
                 />
-                <div>
-                  <button className="btn btn-active px-3" onClick={addDeductions}>
+                <div className="mt-8">
+                  <button className="btn btn-active px-3 " onClick={addDeductions}>
                     <PlusCircleIcon className="h-5 w-5" /> Add
                   </button>
                 </div>
@@ -304,11 +321,14 @@ const PaySlipGenerator = () => {
                   <table className="min-w-full border border-dashed border-gray-500">
                     <thead>
                       <tr>
-                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-left text-lg font-medium uppercase leading-4 tracking-wider">
+                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-center text-lg font-medium uppercase leading-4 tracking-wider">
                           Name
                         </th>
-                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-left text-lg font-medium uppercase leading-4 tracking-wider">
+                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-center text-lg font-medium uppercase leading-4 tracking-wider">
                           Amount
+                        </th>
+                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-center text-lg font-medium uppercase leading-4 tracking-wider">
+                          Delete
                         </th>
                       </tr>
                     </thead>
@@ -321,7 +341,11 @@ const PaySlipGenerator = () => {
                           <td className="whitespace-no-wrap border border-dashed border-gray-500 px-6 py-4">
                             ₹ {item.amount}
                           </td>
-                          <td className="whitespace-no-wrap border border-dashed border-gray-500 px-6 py-4"></td>
+                          <td className="whitespace-no-wrap border border-dashed border-gray-500 px-2 py-4">
+                            <div className="flex justify-center hover:text-red-600">
+                              <TrashIcon className="  h-5 w-5 " />
+                            </div>
+                          </td>
                         </tr>
                       ))}
                     </tbody>
@@ -352,7 +376,7 @@ const PaySlipGenerator = () => {
                   value={reimbursementsAmount}
                   onChange={(e) => setReimbursementsAmount(e.target.value)}
                 />
-                <div>
+                <div className="mt-8">
                   <button className="btn btn-active px-3" onClick={addReimbursements}>
                     <PlusCircleIcon className="h-5 w-5" /> Add
                   </button>
@@ -363,11 +387,14 @@ const PaySlipGenerator = () => {
                   <table className="min-w-full border border-dashed border-gray-500 ">
                     <thead>
                       <tr>
-                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-left text-lg font-medium uppercase leading-4 tracking-wider">
+                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-center text-lg font-medium uppercase leading-4 tracking-wider">
                           Name
                         </th>
-                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-left text-lg font-medium uppercase leading-4 tracking-wider">
+                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-center text-lg font-medium uppercase leading-4 tracking-wider">
                           Amount
+                        </th>
+                        <th className="rounded-md border border-dashed border-gray-500 px-6 py-3 text-center text-lg font-medium uppercase leading-4 tracking-wider">
+                          Delete
                         </th>
                       </tr>
                     </thead>
@@ -380,6 +407,11 @@ const PaySlipGenerator = () => {
                           <td className="whitespace-no-wrap border border-dashed border-gray-500 px-6 py-4">
                             ₹ {item.amount}
                           </td>
+                          <td className="whitespace-no-wrap border border-dashed border-gray-500 px-6 py-4">
+                            <div className="flex justify-center hover:text-red-600">
+                              <TrashIcon className="  h-5 w-5 " />
+                            </div>
+                          </td>
                         </tr>
                       ))}
                     </tbody>
@@ -387,11 +419,10 @@ const PaySlipGenerator = () => {
                 </div>
               )}
             </div>
-
-            <div className="left-10 mt-6 flex flex-row justify-end gap-x-4">
-              <button className="btn btn-neutral btn-wide">Reset</button>
-              <button className="btn btn-info btn-wide text-white">Download As PDF</button>
-            </div>
+          </div>
+          <div className="mt-6 flex flex-col items-center lg:flex-row lg:justify-end lg:gap-x-4 ">
+            <button className="btn btn-neutral btn-wide mb-2 lg:mb-0 lg:mr-4">Reset</button>
+            <button className="btn btn-info btn-wide text-white">Download As PDF</button>
           </div>
         </div>
       </div>
