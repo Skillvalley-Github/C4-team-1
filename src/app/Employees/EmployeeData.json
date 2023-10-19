@@ -1,7 +1,7 @@
 [
     {
       "emp_id": "AXYZWE123",
-      "email": "alex@dashwind.com",
+      "email": "alex@gmail.com",
       "pan_num": "ABCD123456789",
       "f_name": "Alex",
       "l_name": "Kumar",
@@ -16,7 +16,7 @@
     },
     {
       "emp_id": "AXYZWE123",
-      "email": "ereena@dashwind.com",
+      "email": "ereena@gmail.com",
       "pan_num": "ABCD123456789",
       "f_name": "Ereena",
       "l_name": "Kumar",
@@ -31,7 +31,7 @@
     },
     {
       "emp_id": "AXYZWE123",
-      "email": "jhon@dashwind.com",
+      "email": "jhon@gmail.com",
       "pan_num": "ABCD123456789",
       "f_name": "John",
       "l_name": "Kumar",
@@ -46,7 +46,7 @@
     },
     {
       "emp_id": "AXYZWE123",
-      "email": "matrix@dashwind.com",
+      "email": "matrix@gmail.com",
       "pan_num": "ABCD123456789",
       "f_name": "Matrix",
       "l_name": "Kumar",
@@ -61,7 +61,7 @@
     },
     {
       "emp_id": "AXYZWE123",
-      "email": "virat@dashwind.com",
+      "email": "virat@gmail.com",
       "pan_num": "ABCD123456789",
       "f_name": "Virat",
       "l_name": "Kumar",
@@ -76,7 +76,7 @@
     },
     {
       "emp_id": "AXYZWE123",
-      "email": "miya@dashwind.com",
+      "email": "miya@gmail.com",
       "pan_num": "ABCD123456789",
       "f_name": "Miya",
       "l_name": "Kumar",
