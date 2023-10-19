@@ -188,22 +188,7 @@ const PaySlipGenerator = () => {
 
           {/* Earnings */}
           <div className="">
-            <div className="text text-3xl font-semibold">Earnings</div>
-            <div className="flex flex-row gap-x-4">
-              <InputField id="EarningsName" label="Name" type="text" placeholder="Earnings name" required />
-              <InputField
-                id="EarningsAmount"
-                label="Amount"
-                type="text"
-                placeholder="Earnings amount"
-                required
-              />
-              <div>
-                <button className="btn btn-active px-3">
-                  <PlusCircleIcon className="h-5 w-5" /> Add
-                </button>
-              </div>
-            </div>
+          
 
             <div className="">
               <div className="text mt-5 text-2xl font-bold">Earnings</div>
