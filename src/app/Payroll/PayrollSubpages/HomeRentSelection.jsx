@@ -58,10 +58,10 @@ const HomeRentSelection = () => {
                     <input className="input input-bordered " placeholder="₹" type="number" min="0" />
                   </td>
                   <td>
-                    <input className="input input-bordered" placeholder="(yyyy-mm)" type="calendar" />
+                    <input className="input input-bordered" placeholder="(yyyy-mm)" type="date" />
                   </td>
                   <td>
-                    <input className="input input-bordered" placeholder="(yyyy-mm)" type="text" />
+                    <input className="input input-bordered" placeholder="(yyyy-mm)" type="date" />
                   </td>
                   <td>
                     <input className="input input-bordered" placeholder="	Landlord Name" type="text" />
