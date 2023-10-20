@@ -65,20 +65,6 @@ const ProfileSection = () => {
                   </Link>
                 </div>
               </div>
-              {/* <div className="my-auto flex flex-wrap">
-                <Link
-                  to=""
-                  className="text-muted bg-light border-light hover:bg-light-dark active:bg-light-dark focus:bg-light-dark mr-3 inline-block cursor-pointer rounded-2xl border-0 px-6 py-3 text-center align-middle text-base font-medium leading-normal shadow-none transition-colors duration-150 ease-in-out ">
-                  {" "}
-                  Follow{" "}
-                </Link>
-                <Link
-                  to=""
-                  className="hover:bg-primary-dark active:bg-primary-dark focus:bg-primary-dark inline-block cursor-pointer rounded-2xl border-0 bg-primary px-6 py-3 text-center align-middle text-base font-medium leading-normal text-white shadow-none transition-colors duration-150 ease-in-out ">
-                  {" "}
-                  Hire{" "}
-                </Link>
-              </div> */}
             </div>
             <div className="flex flex-wrap justify-between">
               <div className="flex flex-wrap items-center">

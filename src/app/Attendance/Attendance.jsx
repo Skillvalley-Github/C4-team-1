@@ -103,7 +103,7 @@ const Attendance = () => {
                   <span>Leave Applied</span>
                 </div>
               ) : (
-                <button onClick={() => setLeave(true)} className="btn btn-info">
+                <button onClick={() => setLeave(true)} className="btn btn-primary">
                   Apply
                 </button>
               )}
@@ -115,7 +115,7 @@ const Attendance = () => {
             <h2 className="card-title">Details of the Attendance</h2>
             <p>Details about the Attendance of last 12 Months</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-info text-white">See Attendance</button>
+              <button className="btn btn-primary">See Attendance</button>
             </div>
           </div>
         </div>

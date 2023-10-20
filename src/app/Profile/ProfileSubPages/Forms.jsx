@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Forms = () => {
   return (
     <div className="h-fit">
-      <div className="m-5 max-sm:m-2 mb-10 bg-base-100">
+      <div className="m-5 mb-10 bg-base-100">
         <div className="overflow-x-auto">
           <table className="table table-zebra">
             {/* head */}

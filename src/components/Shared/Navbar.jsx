@@ -5,8 +5,8 @@ import Bars3Icon from "@heroicons/react/24/outline/Bars3Icon";
 import MoonIcon from "@heroicons/react/24/outline/MoonIcon";
 import SunIcon from "@heroicons/react/24/outline/SunIcon";
 import Avatar from "../../assets/images/avatar1.jpg"
-
-import { NavLink, Routes, Link, useLocation } from "react-router-dom";
+import {Link, useLocation, useNavigate } from "react-router-dom";
+import { supabase } from "../../app/User/Client";
 
 const Navbar = () => {
   // const {noOfNotifications, pageTitle} = useSelector(state => state.header)
@@ -28,6 +28,8 @@ const Navbar = () => {
     else if(currentRoute==="/dashboard/profile") setPageTitle("Profile")
     else if(currentRoute==="/dashboard/profile/salarydetails") setPageTitle("Profile")
     else if(currentRoute==="/dashboard/profile/payslips") setPageTitle("Profile")
+    else if(currentRoute==="/dashboard/profile/forms") setPageTitle("Profile")
+    else if(currentRoute==="/dashboard/profile/settings") setPageTitle("Profile")
     else if(currentRoute==="/dashboard/payroll/taxdeductions/regime-selection") setPageTitle("Regime Selection")
     else if(currentRoute==="/dashboard/payroll/payslip") setPageTitle("Payslip")
     else if(currentRoute==="/dashboard/payroll/taxdeductions/home-rent") setPageTitle("Home Rent")
@@ -49,7 +51,6 @@ const Navbar = () => {
         setCurrentTheme("light");
       }
     }
-    // 👆 false parameter is required for react project
   }, []);
 
   // Opening right sidebar for notification
@@ -57,9 +58,18 @@ const Navbar = () => {
   //     dispatch(openRightDrawer({header : "Notifications", bodyType : RIGHT_DRAWER_TYPES.NOTIFICATION}))
   // }
 
-  function logoutUser() {
-    localStorage.clear();
-    window.location.href = "/";
+    let navigate = useNavigate()
+
+  // function handleLogout() {
+  //   sessionStorage.removeItem('token')
+  //   navigate('/')
+  //   // localStorage.clear();
+  //   // window.location.href = "/";
+  // }
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    navigate('/')
   }
 
   return (
@@ -145,7 +155,7 @@ const Navbar = () => {
               </li>
               <div className="divider mb-0 mt-0"></div>
               <li>
-                <a onClick={logoutUser}>Logout</a>
+                <a onClick={handleLogout}>Logout</a>
               </li>
             </ul>
           </div>

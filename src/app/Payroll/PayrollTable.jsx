@@ -18,7 +18,7 @@ const PayrollTable = ({ title, columns, rows, buttonLink }) => {
       </div>
 
       <div className="flex flex-col overflow-x-auto p-6  max-sm:p-0 max-sm:pt-3">
-        <div className="card card-body min-w-full bg-base-100 shadow-xl ">
+        <div className="card card-body bg-base-100 shadow-xl min-w-full ">
           <div className="overflow-x-auto">
             <table className="table min-w-full">
               {/* head */}
