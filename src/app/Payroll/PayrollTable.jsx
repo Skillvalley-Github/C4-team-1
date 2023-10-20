@@ -17,31 +17,7 @@ const PayrollTable = ({ title, columns, rows, buttonLink }) => {
         </div>
       </div>
 
-      <div className="flex flex-col overflow-x-auto p-6  max-sm:p-0 max-sm:pt-3">
-        <div className="card card-body bg-base-100 shadow-xl min-w-full ">
-          <div className="overflow-x-auto">
-            <table className="table min-w-full">
-              {/* head */}
-              <thead className="text-xl">
-                <tr>
-                  {columns.map((column, index) => (
-                    <th key={index}>{column}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map((rowData, rowIndex) => (
-                  <tr key={rowIndex}>
-                    {rowData.map((cellData, cellIndex) => (
-                      <td key={cellIndex}>{cellData}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+     
     </>
   );
 };
