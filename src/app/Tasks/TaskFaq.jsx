@@ -1,15 +1,10 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+
 
 const TaskFaq = () => {
   return (
     <div>
-      <div style={{ marginBottom: "1rem" }}>
+      <div className="flex">
         <h1 className="text-center text-8xl text-black">FAQ?</h1>
       </div>
       <div className="collapse collapse-arrow bg-base-200 text-4xl" style={{marginBottom:"1rem" }}>

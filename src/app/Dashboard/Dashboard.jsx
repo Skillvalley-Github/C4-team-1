@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Modal from "../../components/Shared/Modal";
 import { useState } from "react";
+// import { useDispatch } from "react-redux"
+// import TitleCard from "../../components/Cards/TitleCard"
+// import { showNotification } from "../common/headerSlice"
 import employees from "./icons/employees.png";
 import tax from "./icons/tax.png";
 import reimbursement from "./icons/reimbursement.png";
@@ -19,20 +23,6 @@ const INITIAL_INTEGRATION_LIST = [
     link: "/dashboard/employeedata",
   },
   {
-    name: "Generate Payslip",
-    icon: payrollSettings,
-    description:
-    "Customize payroll effortlessly in our settings section. Tailor payment schedules, tax withholdings, and employee details for precise financial management.",
-    link: "/dashboard/payroll/payslip",
-  },
-  {
-    name: "Profile",
-    icon: profile,
-    description:
-      "Easily access and update your details, view salary information, access payslips, submit forms, and configure settings all at one place.",
-    link: "/dashboard/profile",
-  },
-  {
     name: "Attendance",
     icon: attendance,
     description:
@@ -43,43 +33,29 @@ const INITIAL_INTEGRATION_LIST = [
     name: "Tasks",
     icon: task,
     description:
-    "Stay organized and efficient with our tasks section. Assign, track, and manage work seamlessly, ensuring productivity and collaboration.",
+      "Stay organized and efficient with our tasks section. Assign, track, and manage work seamlessly, ensuring productivity and collaboration.",
     link: "/dashboard/tasks",
   },
-  // {
-  //   name: "Salary Details",
-  //   icon: leave,
-  //   description:
-  //     "Simplify leave management with our intuitive leave tracker section. Easily request, approve, and monitor employee absences for seamless HR administration.",
-  //   link: "/dashboard/profile/salarydetails",
-  // },
-  // {
-  //   name: "Your Payslips",
-  //   icon: leave,
-  //   description:
-  //     "Simplify leave management with our intuitive leave tracker section. Easily request, approve, and monitor employee absences for seamless HR administration.",
-  //   link: "/dashboard/profile/payslips",
-  // },
-  // {
-  //   name: "Forms",
-  //   icon: forms,
-  //   description:
-  //     "Simplify leave management with our intuitive leave tracker section. Easily request, approve, and monitor employee absences for seamless HR administration.",
-  //   link: "/dashboard/profile/forms",
-  // },
   {
     name: "Tax Deductions",
     icon: tax,
     description:
-    "Optimize your finances with our tax deductions section. Easily calculate, manage, and maximize your tax benefits for efficient financial planning.",
+      "Optimize your finances with our tax deductions section. Easily calculate, manage, and maximize your tax benefits for efficient financial planning.",
     link: "/dashboard/payroll/taxdeductions",
   },
   {
     name: "Reimbursements",
     icon: reimbursement,
     description:
-    "Effortlessly claim tax reimbursements with our user-friendly section. Simplify expense submissions and receive timely refunds, optimizing your financial management.",
+      "Effortlessly claim tax reimbursements with our user-friendly section. Simplify expense submissions and receive timely refunds, optimizing your financial management.",
     link: "/dashboard/payroll/reimbursements",
+  },
+  {
+    name: "Generate Payslip",
+    icon: payrollSettings,
+    description:
+    "Customize payroll effortlessly in our settings section. Tailor payment schedules, tax withholdings, and employee details for precise financial management.",
+    link: "/dashboard/payroll/payslip",
   },
   {
     name: "Leave Tracker",
@@ -88,9 +64,18 @@ const INITIAL_INTEGRATION_LIST = [
       "Simplify leave management with our intuitive leave tracker section. Easily request, approve, and monitor employee absences for seamless HR administration.",
     link: "/dashboard/leaveTracker",
   },
+  {
+    name: "Profile",
+    icon: profile,
+    description:
+      "Easily access and update your details, view salary information, access payslips, submit forms, and configure settings all at one place.",
+    link: "/dashboard/profile",
+  },
 ];
 
 const Dashboard = () => {
+  // const dispatch = useDispatch()
+
   const [integrationList, setIntegrationList] = useState(
     INITIAL_INTEGRATION_LIST,
   );
@@ -103,11 +88,12 @@ const Dashboard = () => {
         return i;
       }),
     );
+    // dispatch(showNotification({message : `${integration.name} ${integration.isActive ? "disabled" : "enabled"}` , status : 1}))
   };
 
   return (
     <>
-      <div className="m-5 2xl:mx-10 grid grid-cols-1 gap-6 2xl:gap-12 md:grid-cols-3 md:max-lg:grid-cols-2 2xl:grid-cols-4 mb-10">
+      <div className="m-5 2xl:mx-10 grid grid-cols-1 gap-6 2xl:gap-12 md:grid-cols-3 mb-10">
         {integrationList.map((i, k) => {
           return (
             <Link to={i.link} key={k}>
@@ -121,11 +107,23 @@ const Dashboard = () => {
                   />
                   {i.description}
                 </p>
+                {/* <div className="mt-6 text-right">
+                <input
+                  type="checkbox"
+                  className="toggle toggle-success toggle-lg"
+                  checked={i.isActive}
+                  onChange={() => updateIntegrationStatus(k)}
+                />
+              </div> */}
               </div>
             </Link>
           );
         })}
       </div>
+
+      {/* <div className="my-8">
+        <Modal />
+      </div> */}
     </>
   );
 };
