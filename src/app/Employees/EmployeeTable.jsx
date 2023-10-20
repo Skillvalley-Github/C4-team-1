@@ -95,7 +95,7 @@ const EmployeeTable = () => {
                     <td>
                       <button
                         type="button"
-                        class="focus:shadow-outline rounded bg-red-500 px-2 py-1 text-sm text-white hover:bg-red-700 focus:outline-none">
+                        className="focus:shadow-outline rounded bg-red-500 px-2 py-1 text-sm text-white hover:bg-red-700 focus:outline-none">
                         Delete
                       </button>
                     </td>
@@ -107,7 +107,7 @@ const EmployeeTable = () => {
         </div>
         {isOpen && (
           <div
-            className="modal-overlay fixed left-20 top-0 flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-50 max-sm:left-0"
+            className="modal-overlay fixed left-20 top-0 flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-50 max-sm:left-0 max-md:left-0"
             onClick={handleOverlayClick}>
             <div className="modal-container z-50 mx-auto w-11/12 overflow-y-auto rounded border border-slate-500 bg-base-200 shadow-lg md:max-w-md">
               <div className="modal-content px-6 py-4 text-left">

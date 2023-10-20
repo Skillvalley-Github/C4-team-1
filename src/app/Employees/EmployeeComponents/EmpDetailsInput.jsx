@@ -3,36 +3,6 @@ import CustomButton from "../../../components/Shared/CustomButton";
 import logo from "../../../assets/images/logo-red.svg";
 
 const EmpDetailsInput = (props) => {
-  // const INITIAL_REGISTER_OBJ = {
-  //   name: "",
-  //   password: "",
-  //   emailId: "",
-  // };
-
-  // const [loading, setLoading] = useState(false);
-  // const [errorMessage, setErrorMessage] = useState("");
-  // const [registerObj, setRegisterObj] = useState(INITIAL_REGISTER_OBJ);
-
-  // const submitForm = (e) => {
-  //   e.preventDefault();
-  //   setErrorMessage("");
-
-  //   if (registerObj.name.trim() === "") return setErrorMessage("Name is required! (use any value)");
-  //   if (registerObj.emailId.trim() === "") return setErrorMessage("Email Id is required! (use any value)");
-  //   if (registerObj.password.trim() === "") return setErrorMessage("Password is required! (use any value)");
-  //   else {
-  //     setLoading(true);
-  //     // Call API to check user credentials and save token in localstorage
-  //     localStorage.setItem("token", "DumyTokenHere");
-  //     setLoading(false);
-  //     window.location.href = "/app/welcome";
-  //   }
-  // };
-
-  // const updateFormValue = ({ updateType, value }) => {
-  //   setErrorMessage("");
-  //   setRegisterObj({ ...registerObj, [updateType]: value });
-  // };
 
   return (
     <>
