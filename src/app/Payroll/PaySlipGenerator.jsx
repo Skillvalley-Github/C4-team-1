@@ -108,8 +108,8 @@ const PaySlipGenerator = () => {
 
   return (
     <>
-      <div className="flex flex-col overflow-x-auto p-6 max-sm:p-0 max-sm:pt-3">
-        <div className="card card-body min-w-full  bg-base-100 shadow-xl">
+     <div className="flex flex-col overflow-x-auto p-6 max-sm:p-0 ">
+        <div className="md:max-lg:card card-body min-w-full  bg-base-100 shadow-xl">
           <div className="text mb-5 flex justify-center rounded-lg border border-gray-200  bg-slate-200 p-2 text-2xl font-bold text-black shadow-lg ">
             <h1>Employee Pay slip Generator</h1>
           </div>
