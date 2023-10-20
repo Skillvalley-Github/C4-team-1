@@ -95,11 +95,11 @@ const Task = () => {
   };
 
   return (
-    <div className="h-screen ">
+    <div className="h-fit max-sm:h-screen md:h-fit ">
       <div className="flex flex-col max-sm:mr-8">
-        <h1 className="flex justify-center text-2xl mt-8 font-bold">Manage All Tasks</h1>
+        <h1 className="mt-8 flex justify-center text-2xl font-bold text-black">Manage All Tasks</h1>
 
-        <div className="flex p-5">
+        <div className="flex p-3">
           <Dialog open={open} onClose={handleClose}>
             <DialogTitle>Tasks</DialogTitle>
             <DialogContent>
@@ -182,7 +182,9 @@ const Task = () => {
         <div className="flex flex-col">
           <div className="flex flex-col md:flex-row">
             <div className="m-3 flex w-full flex-col  rounded-2xl bg-base-100 p-4 shadow-2xl md:w-9/12">
-              <button onClick={handleClickOpen} className="btn btn-info bg-sky-500 border-none text-slate-100">
+              <button
+                onClick={handleClickOpen}
+                className="btn btn-info border-none bg-sky-500 text-slate-100">
                 <PlusIcon className="h-5 w-5" /> ADD TASK
               </button>
               <div className="flex flex-col overflow-x-auto p-6  max-sm:p-0 max-sm:pt-3">
