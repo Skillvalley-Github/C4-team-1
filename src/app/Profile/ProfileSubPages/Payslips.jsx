@@ -4,8 +4,8 @@ import PrinterIcon from "@heroicons/react/24/outline/PrinterIcon";
 const Payslips = ({ data }) => {
   return (
     <div className="h-fit">
-      <div className="m-5 mb-10 bg-base-100">
-        <div className="overflow-x-auto">
+      <div className="m-5 max-sm:m-2 mb-10 bg-base-100">
+        <div className="overflow-x-auto mb-8">
           <table className="table table-zebra">
             {/* head */}
             <thead>
