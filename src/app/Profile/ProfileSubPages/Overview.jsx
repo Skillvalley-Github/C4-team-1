@@ -16,25 +16,6 @@ const Overview = () => {
       about */}
 
       <div className="mx-2 my-3 w-full md:w-9/12">
-        {/* <div className="bg-base rounded-sm p-3 shadow-sm"> */}
-        {/* <div className="flex items-center space-x-2 font-semibold leading-8 text-gray-900">
-            <span clas="text-green-500">
-              <svg
-                className="h-5"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
-            </span>
-            <span className="tracking-wide">About</span>
-          </div> */}
         <div className="">
           <div className="grid text-base md:grid-cols-2">
             <div className="grid grid-cols-2">
@@ -86,8 +67,8 @@ const Overview = () => {
 
         <div className="my-8"></div>
 
-        <div className="grid grid-cols-2 p-3 max-sm:p-0 max-sm:pb-8 pb-8">
-          <div className="lg:space-x-2">
+        <div className="grid p-3 max-sm:p-0 max-sm:pb-8 pb-8 sm:grid-cols-2">
+          <div className="grid-cols-2 lg:space-x-2 max-md:mb-10 max-sm:ml-4">
             <div className="mb-3 flex items-center  font-semibold leading-8">
               <span clas="">
                 <svg
@@ -125,7 +106,7 @@ const Overview = () => {
               </li>
             </ul>
           </div>
-          <div className="lg:space-x-2">
+          <div className="grid-cols-2 lg:space-x-2 max-sm:ml-4">
             <div className="mb-3 flex items-center space-x-2 font-semibold leading-8">
               <span clas="">
                 <svg

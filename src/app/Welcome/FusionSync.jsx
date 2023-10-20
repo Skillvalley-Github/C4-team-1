@@ -5,7 +5,7 @@ import mockup from "../../assets/images/homepage.svg";
 function FusionSync() {
   return (
     <>
-      <main className="relative lg:h-screen md:h-fit max-sm:h-fit bg-white dark:bg-gray-800">
+      <main className="relative lg:h-screen md:h-fit max-sm:h-fit bg-gray-800">
         <header className="h-24 w-full items-center lg:h-0 max-sm:h-0"></header>
 
         <div className="container relative mx-auto grid px-6 py-16 lg:grid-cols-2">

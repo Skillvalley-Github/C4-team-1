@@ -53,15 +53,15 @@ const routes = [
     icon: <CalendarDaysIcon className={iconClasses} />, // icon component
     name: "Attendance", // name that appear in Sidebar
   },
-  // {
-  //   path: "/leaveTracker", // url
-  //   icon: <ChartBarIcon className={iconClasses} />, // icon component
-  //   name: "Leave Tracker", // name that appear in Sidebar
-  // },
   {
     path: "/dashboard/tasks", // url
     icon: <InboxArrowDownIcon className={iconClasses} />, // icon component
     name: "Tasks", // name that appear in Sidebar
+  },
+  {
+    path: "/dashboard/leaveTracker", // url
+    icon: <ChartBarIcon className={iconClasses} />, // icon component
+    name: "Leave Tracker", // name that appear in Sidebar
   },
   {
     path: "", //no url needed as this has submenu
@@ -73,18 +73,18 @@ const routes = [
         icon: <UserIcon className={submenuIconClasses} />, // icon component
         name: "Profile", // name that appear in Sidebar
       },
-      {
-        path: "/login",
-        icon: <ArrowRightOnRectangleIcon className={submenuIconClasses} />,
-        name: "Login",
-      },
+      // {
+      //   path: "/login",
+      //   icon: <ArrowRightOnRectangleIcon className={submenuIconClasses} />,
+      //   name: "Login",
+      // },
       {
         path: "/register", //url
         icon: <UserIcon className={submenuIconClasses} />, // icon component
         name: "Register", // name that appear in Sidebar
       },
       {
-        path: "/forgot-password",
+        path: "/forgotpassword",
         icon: <KeyIcon className={submenuIconClasses} />,
         name: "Forgot Password",
       },
