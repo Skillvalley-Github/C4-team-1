@@ -71,6 +71,7 @@ function Login({ setUser }) {
                 <a href="#" className="mx-auto justify-center">
                   <img src={logo} alt="" />
                 </a>
+
                 <form className="flex flex-col pb-12 pt-3 md:pt-8" onSubmit={handleSubmit}>
                   <div className="flex flex-col pt-4">
                     <label htmlFor="email" className="text-lg">
@@ -106,6 +107,13 @@ function Login({ setUser }) {
                     className="mt-8 bg-black p-2 text-lg font-bold text-white hover:bg-gray-700"
                   />
                 </form>
+
+                <div className="card bg-base-100">
+                  <div className="card-body p-6">
+                    <p>Email: test@gmail.com</p>
+                    <p>Password: 12345</p>
+                  </div>
+                </div>
               </div>
             </div>
 
