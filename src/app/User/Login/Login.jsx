@@ -3,7 +3,7 @@ import logo from "../../../assets/images/logo-red.svg";
 import { supabase } from "../Client";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../../../components/Shared/Spinner";
-import OfficeView from "../../assets/images/officeView.jpg"
+import OfficeView from "../../../assets/images/officeView.jpg"
 
 function Login({ setUser }) {
   // console.log(setToken)
