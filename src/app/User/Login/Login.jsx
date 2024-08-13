@@ -3,6 +3,7 @@ import logo from "../../../assets/images/logo-red.svg";
 import { supabase } from "../Client";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../../../components/Shared/Spinner";
+import OfficeView from "../../../assets/images/officeView.jpg"
 
 function Login({ setUser }) {
   // console.log(setToken)
@@ -118,9 +119,14 @@ function Login({ setUser }) {
             </div>
 
             <div className="w-1/2 shadow-2xl">
-              <img
+{/*               <img
                 className="hidden h-screen w-full object-cover md:block"
                 src="https://source.unsplash.com/random/?office,employees"
+              /> */}
+              <img
+                className="hidden h-screen w-full object-cover md:block"
+                src={OfficeView}
+                alt="image"
               />
             </div>
           </div>
